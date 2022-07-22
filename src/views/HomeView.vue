@@ -2,7 +2,7 @@
   <div class="home">
     <h1>This is an <strong>home</strong> page</h1>
     <img alt="Vue logo"
-         src="../assets/embacy.png">
+         src="../assets/images/embacy.png">
   </div>
 </template>
 
