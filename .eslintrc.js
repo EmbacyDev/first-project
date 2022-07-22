@@ -22,7 +22,7 @@ module.exports = {
     }],
     'vue/html-indent': [
       'error',
-      4,
+      2,
       {
         attribute: 1,
         baseIndent: 1,
@@ -102,6 +102,7 @@ module.exports = {
       exports: 'never',
       functions: 'never'
     }],
+    'linebreak-style': ['error', process.platform === 'win32' ? 'windows' : 'unix'],
     'no-console': 'off',
     'no-debugger': 'error',
     'arrow-parens': ['error', 'as-needed'],
