@@ -39,9 +39,10 @@ export default {
   }
 
   p {
+    @include large-text;
+    @include main-border(red, 2px);
     margin: 0;
     padding: $padding * 2;
-    color: white;
   }
 }
 </style>

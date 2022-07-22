@@ -1,0 +1,16 @@
+@mixin large-text {
+  font: {
+    family: Avenir, Helvetica, Arial, sans-serif;
+    size: 30px;
+    weight: bold;
+  }
+  color: white;
+}
+
+@mixin main-border ($color, $width) {
+  border: {
+    color: $color;
+    width: $width;
+    style: dashed;
+  }
+}
