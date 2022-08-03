@@ -1,8 +1,7 @@
 <template>
   <div class="home">
     <h1>This is an <strong>home</strong> page</h1>
-    <img alt="Vue logo"
-         src="../assets/images/embacy.png">
+    <main-button/>
     <main-form/>
   </div>
 </template>
@@ -22,4 +21,8 @@ export default {
 </script>
 
 <style lang="scss">
+.main-form {
+  position: absolute;
+  left: 200px;
+}
 </style>

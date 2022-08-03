@@ -17,21 +17,37 @@
   }
 }
 
+@mixin left-colum {
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  align-items: flex-start;
+}
+
 @mixin label-text {
   font: {
     weight: 400;
     size: 14px;
-    height: 140%;
   }
+  line-height: 140%;
   color: #050A1B;
+}
+
+@mixin btn-text {
+  font: {
+    weight: 400;
+    size: 16px;
+  }
+  line-height: 120%;
+  color: #0432D3;
 }
 
 @mixin h3 {
   font: {
     weight: 600;
     size: 28px;
-    height: 120%;
   }
+  line-height: 120%;
   margin: 0;
   color: #050A1B;
 }
