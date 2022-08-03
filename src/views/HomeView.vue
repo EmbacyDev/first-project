@@ -3,13 +3,14 @@
     <h1>This is an <strong>home</strong> page</h1>
     <img alt="Vue logo"
          src="../assets/images/embacy.png">
+    <main-form/>
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'HomeView',
-  components: {},
   props: {},
   data() {
     return {};

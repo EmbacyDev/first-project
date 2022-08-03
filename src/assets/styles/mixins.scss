@@ -1,7 +1,9 @@
+@import "variables.scss";
+
 @mixin large-text {
   font: {
     family: Avenir, Helvetica, Arial, sans-serif;
-    size: 30px;
+    size: $main-size;
     weight: bold;
   }
   color: white;
@@ -13,4 +15,23 @@
     width: $width;
     style: dashed;
   }
+}
+
+@mixin label-text {
+  font: {
+    weight: 400;
+    size: 14px;
+    height: 140%;
+  }
+  color: #050A1B;
+}
+
+@mixin h3 {
+  font: {
+    weight: 600;
+    size: 28px;
+    height: 120%;
+  }
+  margin: 0;
+  color: #050A1B;
 }

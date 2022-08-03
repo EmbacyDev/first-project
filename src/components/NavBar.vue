@@ -26,9 +26,8 @@ export default {
 
 <style scoped lang="scss">
 .navBar {
-  padding: $padding;
+  padding: $main-padding;
   background-color: #6c859d;
-
   a {
     font-weight: bold;
     color: #2e3036;
@@ -42,7 +41,7 @@ export default {
     @include large-text;
     @include main-border(red, 2px);
     margin: 0;
-    padding: $padding * 2;
+    padding: $main-padding;
   }
 }
 </style>
