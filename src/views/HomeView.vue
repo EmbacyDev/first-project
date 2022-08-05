@@ -1,8 +1,9 @@
 <template>
   <div class="home">
     <h1>This is an <strong>home</strong> page</h1>
-    <main-button/>
-    <main-form/>
+    <main-button />
+    <main-form />
+    <notification-email />
   </div>
 </template>
 

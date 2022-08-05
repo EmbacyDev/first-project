@@ -34,7 +34,6 @@
                type="file"
                multiple
                accept="image/*,image/jpeg"
-
         >
       </label>
     </div>
@@ -43,6 +42,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'MainForm',
   components: {},

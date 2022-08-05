@@ -1,6 +1,7 @@
 <template>
   <nav-bar />
   <router-view />
+  <NotificationEmail/>
 </template>
 
 <script>
