@@ -10,14 +10,14 @@
 <script>
 
 export default {
-    name: "HomeView",
-    props: {},
-    data() {
-        return {};
-    },
-    computed: {},
-    watch: {},
-    methods: {},    
+  name: 'HomeView',
+  props: {},
+  data() {
+    return {};
+  },
+  computed: {},
+  watch: {},
+  methods: {}
 };
 </script>
 

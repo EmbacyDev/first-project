@@ -11,14 +11,14 @@
                required
                v-model="email">
       </label>
-    </div>    
+    </div>
     <main-button> Subscrybe </main-button>
   </form>
 </template>
 
 <script>
 export default {
-  name: 'NewstForm',  
+  name: 'NewsForm',
   props: {},
   data() {
     return {
@@ -60,8 +60,8 @@ export default {
         .email {
           width: 100%;
           height: 56px;
-        } 
+        }
       }
-    }    
+    }
   }
 </style>
