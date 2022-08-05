@@ -3,20 +3,21 @@
     <h1>This is an <strong>home</strong> page</h1>
     <main-button/>
     <main-form/>
+    <news-form/>
   </div>
 </template>
 
 <script>
 
 export default {
-  name: 'HomeView',
-  props: {},
-  data() {
-    return {};
-  },
-  computed: {},
-  watch: {},
-  methods: {}
+    name: "HomeView",
+    props: {},
+    data() {
+        return {};
+    },
+    computed: {},
+    watch: {},
+    methods: {},    
 };
 </script>
 
