@@ -1,16 +1,16 @@
 <template>
-  <div class="home">
-    <h1>This is an <strong>home</strong> page</h1>
-    <main-form/>
+  <div class="blog">
+    <h1>This is an <strong>blog</strong> page</h1>
   </div>
 </template>
-
 <script>
 
 export default {
-  name: 'HomeView',
-  props: {
+  name: 'BlogView',
+  components: {
+
   },
+  props: {},
   data() {
     return {};
   },
@@ -21,8 +21,4 @@ export default {
 </script>
 
 <style lang="scss">
-.main-form {
-  position: absolute;
-  left: 200px;
-}
 </style>

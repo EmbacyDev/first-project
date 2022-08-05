@@ -1,10 +1,21 @@
 <template>
   <div class="navBar">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <p>{{ msg }}</p>
+    <div class="menu">
+      <router-link class="logo-w"
+                   to="/">
+        <img class="logo"
+             alt="icon"
+             src="../assets/images/Slash-icon.png">
+      </router-link>
+      <nav>
+        <router-link to="/brands">Brands</router-link>
+        <router-link to="/career">Career</router-link>
+        <router-link to="/blog">Blog</router-link>
+      </nav>
+    </div>
+    <main-button title="Log in"
+                 class="primary"
+    />
   </div>
 </template>
 
@@ -14,9 +25,7 @@ export default {
   components: {},
   props: {},
   data() {
-    return {
-      msg: 'This is a NavBar component'
-    };
+    return {};
   },
   computed: {},
   watch: {},
@@ -25,23 +34,38 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
 .navBar {
-  padding: $main-padding;
-  background-color: #6c859d;
-  a {
-    font-weight: bold;
-    color: #2e3036;
-
-    &.router-link-exact-active {
-      color: #42b983;
+  display: flex;
+  justify-content: space-between;
+  padding: $in-52 $in-100 $in-52 $in-100;
+  background-color: $white-m;
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo-w {
+      width: 76px;
+      .logo {
+        max-width: $in-76;
+      }
     }
-  }
-
-  p {
-    @include large-text;
-    @include main-border(red, 2px);
-    margin: 0;
-    padding: $main-padding;
+    nav {
+      margin-left: $in-140;
+      width: 268px;
+      display: flex;
+      justify-content: space-between;
+      a {
+        text-decoration: none;
+        @include body-r();
+        &.router-link-exact-active {
+          @include body-r($blue-p);
+        }
+        &:hover {
+          @include body-r($blue-p);
+        }
+      }
+    }
   }
 }
 </style>

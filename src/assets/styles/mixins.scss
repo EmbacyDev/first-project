@@ -1,20 +1,106 @@
 @import "variables.scss";
 
-@mixin large-text {
+/*----------------------- Typography Desktop ------------------------------ */
+
+@mixin h1 ($color: $black-m){
   font: {
-    family: Avenir, Helvetica, Arial, sans-serif;
-    size: $main-size;
-    weight: bold;
+    family: EuclidCircularA-SemiBold;
+    style: normal;
+    size: 68px;
+    weight: 600;
   }
-  color: white;
+  line-height: 110%;
+  color: $color;
 }
 
-@mixin main-border ($color, $width) {
-  border: {
-    color: $color;
-    width: $width;
-    style: dashed;
+@mixin h2 ($color: $black-m){
+  font: {
+    family: EuclidCircularA-SemiBold;
+    style: normal;
+    weight: 600;
+    size: 40px;
   }
+  line-height: 130%;
+  color: $color;
+}
+
+@mixin h3 ($color: $black-m){
+  font: {
+    family: EuclidCircularA-SemiBold;
+    style: normal;
+    weight: 600;
+    size: 28px;
+  }
+  line-height: 120%;
+  color: $color;
+}
+
+@mixin subtitle ($color: $black-m){
+  font: {
+    family: EuclidCircularA-Medium;
+    style: normal;
+    weight: 500;
+    size: 20px;
+  }
+  line-height: 120%;
+  color: $color;
+}
+
+@mixin preheader ($color: $black-m){
+  font: {
+    family: EuclidCircularA-Regular;
+    style: normal;
+    size: 14px;
+    weight: 400;
+  }
+  line-height: 100%;
+  color: $color;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+@mixin body-l ($color: $black-m) {
+  font: {
+    family: EuclidCircularA-Light;
+    style: normal;
+    weight: 300;
+    size: 18px;
+  }
+  line-height: 160%;
+  color: $color;
+}
+
+@mixin body-r ($color: $black-m) {
+  font: {
+    family: EuclidCircularA-Regular;
+    style: normal;
+    weight: 400;
+    size: 16px;
+  }
+  line-height: 150%;
+  color: $color;
+}
+
+@mixin sub-r ($color: $black-m) {
+  font: {
+    family: EuclidCircularA-Regular;
+    style: normal;
+    weight: 400;
+    size: 14px;
+  }
+  line-height: 140%;
+  color: $color;
+}
+
+@mixin btn-m ($color: $black-m) {
+  font: {
+    family: EuclidCircularA-Medium;
+    style: normal;
+    weight: 400;
+    size: 16px;
+  }
+  line-height: 120%;
+  color: $color;
 }
 
 @mixin left-colum {
@@ -22,32 +108,4 @@
   flex-direction: column;
   align-content: stretch;
   align-items: flex-start;
-}
-
-@mixin label-text {
-  font: {
-    weight: 400;
-    size: 14px;
-  }
-  line-height: 140%;
-  color: #050A1B;
-}
-
-@mixin btn-text {
-  font: {
-    weight: 400;
-    size: 16px;
-  }
-  line-height: 120%;
-  color: #0432D3;
-}
-
-@mixin h3 {
-  font: {
-    weight: 600;
-    size: 28px;
-  }
-  line-height: 120%;
-  margin: 0;
-  color: #050A1B;
 }

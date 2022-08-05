@@ -27,7 +27,8 @@
         <span class="upload-title">Choose a file
           <img class="img-title"
                alt="icon"
-               src="../assets/images/icon.svg"></span>
+               src="../assets/images/icon.svg">
+        </span>
         <input name="photo"
                id="upload"
                class="upload"
@@ -66,7 +67,7 @@ export default {
     padding: 40px;
     background: #F2F5FC;
     .header-form {
-      @include h3;
+      @include h3();
       display: flex;
       margin-bottom: 40px;
     }
@@ -76,6 +77,7 @@ export default {
       label {
         position: relative;
         @include left-colum;
+        @include sub-r();
         width: 100%;
         input {
           margin-top: 6px;
@@ -93,7 +95,7 @@ export default {
           border: 0;
         }
         .upload-title {
-          @include btn-text;
+          @include btn-m($blue-p);
           cursor: pointer;
           display: flex;
           flex-direction: row-reverse;
