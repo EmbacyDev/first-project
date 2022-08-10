@@ -71,7 +71,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@include desktop {
   button {
     display: flex;
     border: 0;
@@ -87,22 +86,4 @@ export default {
       margin-left: $in-8;
     }
   }
-}
-@include mobile {
-  button {
-    display: flex;
-    border: 0;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    padding: 11px $in-20 11px $in-20;
-    span {
-      @include btn-m()
-    }
-    svg {
-      margin-left: $in-8;
-    }
-  }
-}
 </style>

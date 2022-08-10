@@ -41,7 +41,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@include desktop {
   .navBar {
     display: flex;
     justify-content: space-between;
@@ -68,7 +67,6 @@ export default {
       }
     }
   }
-}
 @include mobile() { }
 
 </style>
