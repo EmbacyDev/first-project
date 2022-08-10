@@ -32,7 +32,7 @@ export default {
 <style lang="scss">
   .container {
     background-color: #fabfe4;
-    width: 1000px;
+    width: 1200px;
     height: 404px;
     position: absolute;
     bottom: 0;
