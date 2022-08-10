@@ -25,14 +25,14 @@
 }
 
 /*----------------------- Typography Desktop ------------------------------ */
-@mixin h1($color: $black-m) {
+@mixin h1($color: $black-m, $size: 68px, $height: 110%) {
   font: {
     family: EuclidCircularA-SemiBold;
     style: normal;
-    size: 68px;
+    size: $size;
     weight: 600;
   }
-  line-height: 110%;
+  line-height: $height;
   color: $color;
 }
 
@@ -124,4 +124,14 @@
   }
   line-height: 120%;
   color: $color;
+}
+
+/*----------------------- Links ------------------------------ */
+@mixin newsArticles {
+  @include subtitle;
+  text-decoration-line: none;
+  &:hover {
+    @include subtitle($blue-p);
+    text-decoration-line: underline;
+  }
 }

@@ -20,6 +20,29 @@
   }
 }
 
+.solid {
+  background: $white-m;
+  color: $blue-p;
+  border: 1px solid $blue-p;
+  span {
+    @include btn-m($blue-p)
+  }
+  &:hover {
+    border: 1px solid $hover-btn;
+    color: $hover-btn;
+    span {
+      @include btn-m($hover-btn)
+    }
+  }
+  &:active {
+    border: 1px solid $active-btn;
+    color: $active-btn;
+    span {
+      @include btn-m($active-btn)
+    }
+  }
+}
+
 .yellow {
   background: $yellow-p;
   span {

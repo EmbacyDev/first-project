@@ -71,11 +71,9 @@ export default {
 
   .line-form {
     margin-top: 24px;
-    @include left-colum;
 
     label {
       position: relative;
-      @include left-colum;
       @include sub-r();
       width: 100%;
 
