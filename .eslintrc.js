@@ -11,16 +11,8 @@ module.exports = {
     parser: '@babel/eslint-parser'
   },
   rules: {
-    'vuejs-accessibility/label-has-for': ['error', {
-      required: {
-        some: ['nesting', 'id']
-      }
-    }],
-    'jsx-a11y/label-has-associated-control': ['error', {
-      required: {
-        some: ['nesting', 'id']
-      }
-    }],
+    'vuejs-accessibility/label-has-for': 'off',
+    'jsx-a11y/label-has-associated-control': 'off',
     'vue/html-self-closing': ['error', {
       html: {
         void: 'never',
