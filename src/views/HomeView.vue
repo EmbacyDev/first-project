@@ -1,7 +1,6 @@
 <template>
   <div class="home">
     <h1>This is an <strong>home</strong> page</h1>
-    <main-form/>
   </div>
 </template>
 
@@ -21,8 +20,4 @@ export default {
 </script>
 
 <style lang="scss">
-.main-form {
-  position: absolute;
-  left: 200px;
-}
 </style>
