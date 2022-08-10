@@ -41,17 +41,49 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@include mobile-u {
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px $in-100 50px $in-100;
+  background-color: $white-m;
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo-w {
+      width: 76px;
+      .logo {
+        max-width: $in-76;
+      }
+    }
+    nav {
+      margin-left: $in-140;
+      width: 268px;
+      display: flex;
+      justify-content: space-between;
+      a {
+        @include newsArticles;
+      }
+    }
+  }
+  .btn-w {
+    display: flex;
+  }
+}
+}
+@include mobile-d {
   .navBar {
     display: flex;
     justify-content: space-between;
     padding: 50px $in-100 50px $in-100;
-    background-color: $white-m;
+    background-color: red;
     .menu {
       display: flex;
       justify-content: space-between;
       align-items: center;
       .logo-w {
-        width: 76px/16em;
+        width: 76px;
         .logo {
           max-width: $in-76;
         }
@@ -60,7 +92,9 @@ export default {
         margin-left: $in-140;
         width: 268px;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
         a {
           @include newsArticles;
         }
@@ -68,6 +102,8 @@ export default {
     }
     .btn-w {
       display: flex;
+      flex-direction: column;
     }
   }
+}
 </style>

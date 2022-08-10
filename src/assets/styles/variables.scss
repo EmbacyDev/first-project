@@ -21,14 +21,12 @@
 }
 
 /*----------------------- breakpoints ------------------------------ */
-/* Mobile */
-$breakpoint-s: 479px;
-/* Mobile - h */
-$breakpoint-m: 768px;
-/* Tablet */
-$breakpoint-xl: 990px;
-/* Desktop */
-$breakpoint-xxl: 1440px;
+$breakpoints: (
+        bp-xl : 1440px,
+        bp-l : 991px,
+        bp-m: 767px,
+        bp-s : 479px,
+);
 
 /*----------------------- indents ------------------------------ */
 $in-2: 2px;
