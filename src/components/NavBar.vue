@@ -13,7 +13,7 @@
         <router-link to="/blog">Blog</router-link>
       </nav>
     </div>
-    <div>
+    <div class="btn-w">
       <main-button style="margin-right: 16px "
                    title="Log in"
                    class="solid"
@@ -44,7 +44,7 @@ export default {
   .navBar {
     display: flex;
     justify-content: space-between;
-    padding: $in-52 $in-100 $in-52 $in-100;
+    padding: 50px $in-100 50px $in-100;
     background-color: $white-m;
     .menu {
       display: flex;
@@ -66,7 +66,8 @@ export default {
         }
       }
     }
+    .btn-w {
+      display: flex;
+    }
   }
-@include mobile() { }
-
 </style>
