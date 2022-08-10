@@ -3,14 +3,13 @@
         method="post">
     <p class="header-form">JavaScript Developer (Remote)</p>
     <div class="line-form">
-      <label for="email">Your email
-        <input name="email"
-               id="email"
-               class="email"
-               type="email"
-               required
-               v-model="email">
-      </label>
+      <label for="email">Your email</label>
+      <input name="email"
+             id="email"
+             class="email"
+             type="email"
+             required
+             v-model="email">
     </div>
     <div class="line-form">
       <label for="yourself">Tell us about yourself
