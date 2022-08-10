@@ -1,19 +1,21 @@
 <template>
-  <form class="news-form"
-        method="post">
-    <p class="header-form">Your email</p>
-    <div class="line-form">
-      <label for="email">Your email
-        <input name="email"
-               id="email"
-               class="email"
-               type="email"
-               required
-               v-model="email">
-      </label>
-    </div>
-    <main-button> Subscrybe </main-button>
-  </form>
+  <div class="news-form-w">
+    <p class="header-form">Subscribe to Slash news</p>
+    <form class="news-form"
+          method="post">
+      <div class="line-form">
+        <label for="email">Your email
+          <input name="email"
+                 id="email"
+                 class="email"
+                 type="email"
+                 required
+                 v-model="email">
+        </label>
+      </div>
+      <main-button> Subscrybe </main-button>
+    </form>
+  </div>
 </template>
 
 <script>
@@ -34,6 +36,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
+    .news-form-w {
+      background-color: #FFDBF1;
+      padding: 140px;
+      display: flex;
+      flex-direction: column;
+    }
   .news-form {
     max-width: 592px;
     padding: 40px;
