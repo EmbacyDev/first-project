@@ -1,8 +1,31 @@
 @import "variables.scss";
+/*----------------------- breakpoints-mixins ------------------------------ */
+@mixin mobile() {
+  @media (max-width: $breakpoint-s) {
+    @content;
+  }
+}
+
+@mixin mobile-h() {
+  @media (max-width: $breakpoint-m) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media (max-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media (max-width: $breakpoint-xxl) {
+    @content;
+  }
+}
 
 /*----------------------- Typography Desktop ------------------------------ */
-
-@mixin h1 ($color: $black-m){
+@mixin h1($color: $black-m) {
   font: {
     family: EuclidCircularA-SemiBold;
     style: normal;
@@ -13,7 +36,7 @@
   color: $color;
 }
 
-@mixin h2 ($color: $black-m){
+@mixin h2($color: $black-m) {
   font: {
     family: EuclidCircularA-SemiBold;
     style: normal;
@@ -24,7 +47,7 @@
   color: $color;
 }
 
-@mixin h3 ($color: $black-m){
+@mixin h3($color: $black-m) {
   font: {
     family: EuclidCircularA-SemiBold;
     style: normal;
@@ -35,7 +58,7 @@
   color: $color;
 }
 
-@mixin subtitle ($color: $black-m){
+@mixin subtitle($color: $black-m) {
   font: {
     family: EuclidCircularA-Medium;
     style: normal;
@@ -46,7 +69,7 @@
   color: $color;
 }
 
-@mixin preheader ($color: $black-m){
+@mixin preheader($color: $black-m) {
   font: {
     family: EuclidCircularA-Regular;
     style: normal;
@@ -59,7 +82,7 @@
   text-transform: uppercase;
 }
 
-@mixin body-l ($color: $black-m) {
+@mixin body-l($color: $black-m) {
   font: {
     family: EuclidCircularA-Light;
     style: normal;
@@ -70,7 +93,7 @@
   color: $color;
 }
 
-@mixin body-r ($color: $black-m) {
+@mixin body-r($color: $black-m) {
   font: {
     family: EuclidCircularA-Regular;
     style: normal;
@@ -81,7 +104,7 @@
   color: $color;
 }
 
-@mixin sub-r ($color: $black-m) {
+@mixin sub-r($color: $black-m) {
   font: {
     family: EuclidCircularA-Regular;
     style: normal;
@@ -92,7 +115,7 @@
   color: $color;
 }
 
-@mixin btn-m ($color: $black-m) {
+@mixin btn-m($color: $black-m) {
   font: {
     family: EuclidCircularA-Medium;
     style: normal;
@@ -101,11 +124,4 @@
   }
   line-height: 120%;
   color: $color;
-}
-
-@mixin left-colum {
-  display: flex;
-  flex-direction: column;
-  align-content: stretch;
-  align-items: flex-start;
 }

@@ -20,9 +20,22 @@
   src: url('@/assets/fonts/EuclidCircularA/EuclidCircularA-Light.woff2') format('woff2');
 }
 
+/*----------------------- breakpoints ------------------------------ */
+/* Mobile */
+$breakpoint-s: 479px;
+/* Mobile - h */
+$breakpoint-m: 768px;
+/* Tablet */
+$breakpoint-xl: 990px;
+/* Desktop */
+$breakpoint-xxl: 1440px;
+
 /*----------------------- indents ------------------------------ */
+$in-2: 2px;
 $in-4: 4px;
+$in-6: 6px;
 $in-8: 8px;
+$in-10: 10px;
 $in-12: 12px;
 $in-16: 16px;
 $in-20: 20px;
