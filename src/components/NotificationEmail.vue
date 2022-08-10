@@ -1,16 +1,15 @@
+<!-- eslint-disable vue/max-attributes-per-line -->
+<!-- eslint-disable vuejs-accessibility/form-control-has-label -->
 <template>
-  <div class='notification'>
-    <img alt='letter'
-         class='letter'
-         src='../../src/assets/images/letter.png'>
-    <h3>Confirm your email to proceed</h3>
-    <p>Please open confirmation link sent to {mail@gmail.com}</p>
-    <button class='send'>
-      Send again
-    </button>
-    <button class='done'>
-      Done
-    </button>
+  <div class='container'>
+    <h3>Subscribe to Slash news</h3>
+    <div class='notification'>
+      <p>Your email</p>
+      <input type='text' name='user_email' placeholder='Inputname@mail.com'>
+      <button class='subscribe'>
+        Subscribe
+      </button>
+    </div>
   </div>
 </template>
 
@@ -31,8 +30,67 @@ export default {
 </script>
 
 <style lang="scss">
+  .container {
+    background-color: #fabfe4;
+    width: 1000px;
+    height: 404px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  h3 {
+      font-size: 40px;
+      left: 52px;
+      position: absolute;
+      top: 80px;
+      color: #050A1B;
+  }
+
   .notification {
-    background-color: #CDE7FF;
     color: #000;
+    left: 52px;
+    position: relative;
+    top: 180px;
+    background-color: #fff;
+    width: 591px;
+    height: 154px;
+    margin-top: 40px;
+
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      left: 40px;
+      position: absolute;
+      top: 20px;
+    }
+    input {
+      position: absolute;
+      background: #F2F5FC;
+      top: 65px;
+      left: 40px;
+      width: 355px;
+      height: 40px;
+      padding: 0px 20px;
+      border: none;
+      outline: none;
+    }
+      ::placeholder {
+        color: #98ABD9;
+        font-size: 16px;
+      }
+
+    button.subscribe {
+      position: absolute;
+      right: 40px;
+      top: 65px;
+      width: 106px;
+      height: 40px;
+      background-color: #0432D3;
+      border: none;
+      color: #fff;
+      font-weight: 500;
+      font-size: 14px;
+      cursor: pointer;
+    }
   }
 </style>
