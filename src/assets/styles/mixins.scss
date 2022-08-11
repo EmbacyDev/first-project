@@ -109,3 +109,48 @@
     text-decoration-line: underline;
   }
 }
+
+@mixin insideText {
+  @include body-r($color: $blue-p);
+  text-decoration-line: none;
+  &:hover {
+    @include body-r($blue-p);
+    text-decoration-line: underline;
+  }
+}
+
+@mixin headerMenu {
+  @include body-r;
+  text-decoration-line: none;
+  &:hover {
+    @include body-r($blue-p);
+    text-decoration-line: none;
+  }
+}
+/* Почему-то не работает */
+@mixin linkondarkBG {
+  @include body-r($grenn-p);
+  text-decoration-line: underline;
+  &:hover {
+    @include body-r($grenn-p);
+    text-decoration-line: none;
+  }
+}
+
+@mixin blackLink {
+  @include sub-r;
+  text-decoration-line: underline;
+  &:hover {
+    @include sub-r;
+    text-decoration-line: none;
+  }
+}
+
+@mixin tabs {
+  @include body-r;
+  text-decoration-line: none;
+  &:hover {
+    @include body-r ($blue-p);
+    text-decoration-line: underline;
+  }
+}
