@@ -63,7 +63,7 @@ export default {
       display: flex;
       justify-content: space-between;
       a {
-        @include newsArticles;
+        @include headerMenu;
       }
     }
   }
