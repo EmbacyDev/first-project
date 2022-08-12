@@ -71,4 +71,19 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  button {
+    display: flex;
+    border: 0;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding: 14px $in-28 14px $in-28;
+    span {
+      @include btn-m()
+    }
+    svg {
+      margin-left: $in-8;
+    }
+  }
 </style>

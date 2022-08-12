@@ -7,7 +7,7 @@
              alt="icon"
              src="../assets/images/Slash-icon.png">
       </router-link>
-      /* переключение классов active: isActive */
+      <!--      /* переключение классов active: isActive */-->
       <nav :class="{ active: isActive }">
         <router-link to="/brands">Brands</router-link>
         <router-link to="/career">Career</router-link>
@@ -25,7 +25,7 @@
     </div>
     <button class="burger-btn"
             @click="openMenu">
-      /* переключение классов active: isActive */
+      <!--      /* переключение классов active: isActive */-->
       <span class="first"/>
       <span class="midl"/>
       <span class="last"/>
