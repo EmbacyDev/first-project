@@ -109,3 +109,48 @@
     text-decoration-line: underline;
   }
 }
+
+@mixin linkInside {
+  @include body-r($color: $blue-p);
+  text-decoration-line: none;
+  &:hover {
+    @include body-r($blue-p);
+    text-decoration-line: underline;
+  }
+}
+
+@mixin linkHeader {
+  @include body-r;
+  text-decoration-line: none;
+  &:hover {
+    @include body-r($blue-p);
+    text-decoration-line: none;
+  }
+}
+/* Почему-то не работает */
+@mixin linkDarkBG {
+  @include body-r($green-p);
+  text-decoration-line: underline;
+  &:hover {
+    @include body-r($green-p);
+    text-decoration-line: none;
+  }
+}
+
+@mixin linkBlack {
+  @include sub-r;
+  text-decoration-line: underline;
+  &:hover {
+    @include sub-r;
+    text-decoration-line: none;
+  }
+}
+
+@mixin linkTabs {
+  @include body-r;
+  text-decoration-line: none;
+  &:hover {
+    @include body-r ($blue-p);
+    text-decoration-line: underline;
+  }
+}
