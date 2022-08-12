@@ -83,6 +83,9 @@ export default {
   .btn-w {
     display: flex;
   }
+  .burger-btn {
+    display: none;
+  }
 }
 }
 @include mobile-d {
