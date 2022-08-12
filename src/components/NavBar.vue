@@ -7,7 +7,6 @@
              alt="icon"
              src="../assets/images/Slash-icon.png">
       </router-link>
-      <!--      /* переключение классов active: isActive */-->
       <nav :class="{ active: isActive }">
         <router-link to="/brands">Brands</router-link>
         <router-link to="/career">Career</router-link>
@@ -23,12 +22,13 @@
                    class="primary"
       />
     </div>
-    <button class="burger-btn"
+    <button :class="{ active: isActive }"
+            class="burger"
             @click="openMenu">
-      <!--      /* переключение классов active: isActive */-->
-      <span class="first"/>
-      <span class="midl"/>
-      <span class="last"/>
+      <span class="burger-lines_first"/>
+      <span class="burger-lines_second"/>
+      <span class="burger-lines_third"/>
+      <span class="burger-lines_fourth"/>
     </button>
   </div>
 </template>
@@ -55,46 +55,11 @@ export default {
 
 <style scoped lang="scss">
 @include mobile-u {
-.navBar {
-  display: flex;
-  justify-content: space-between;
-  padding: 50px $in-100 50px $in-100;
-  background-color: $white-m;
-  .menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    .logo-w {
-      width: 76px;
-      .logo {
-        max-width: $in-76;
-      }
-    }
-    nav {
-      margin-left: $in-140;
-      width: 268px;
-      display: flex;
-      justify-content: space-between;
-      a {
-        @include linkHeader;
-      }
-    }
-  }
-  .btn-w {
-    display: flex;
-  }
-  .burger-btn {
-    display: none;
-  }
-}
-}
-@include mobile-d {
   .navBar {
-    position: relative;
     display: flex;
     justify-content: space-between;
     padding: 50px $in-100 50px $in-100;
-    background-color: red;
+    background-color: $white-m;
     .menu {
       display: flex;
       justify-content: space-between;
@@ -106,8 +71,50 @@ export default {
         }
       }
       nav {
-        /*  класс display none */
-        top: 100px;
+        margin-left: $in-140;
+        width: 268px;
+        display: flex;
+        justify-content: space-between;
+        a {
+          @include linkHeader;
+        }
+      }
+    }
+    .btn-w {
+      display: flex;
+    }
+    .burger {
+      display: none;
+    }
+  }
+}
+@include mobile-d {
+  .navBar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: $in-20 $in-24 $in-20 $in-24;
+    background-color: red;
+    .menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .logo-w {
+        width: 76px;
+        .logo {
+          max-width: $in-76;
+        }
+      }
+      nav.active {
+        height: 100%;
+        top: 65px;
+        opacity: 100%;
+      }
+      nav {
+        height: 0;
+        opacity: 0;
+        display: flex;
+        top: 0;
         left: 0;
         width: 100%;
         position: absolute;
@@ -119,39 +126,55 @@ export default {
           @include linkHeader;
         }
       }
-      /*  классов active */
-      .active {
-        display: flex;
-      }
     }
     .btn-w {
       display: none;
       flex-direction: column;
     }
-    .burger-btn {
+    .burger {
+      width: 20px;
+      height: 20px;
+      position: relative;
       border: 0;
+      padding: 0;
       background: transparent;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      min-width: 24px;
-      height: 24px;
-      padding: 2px;
+      cursor: pointer;
+      transition: 0.1s;
+      transition-delay: 0.10s;
       span {
-        width: 100%;
+        display: block;
+        text-indent: 100%;
+        overflow: hidden;
+        white-space: nowrap;
         height: 2px;
-        background: black;
+        background-color: #000;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        transition: .3s all linear;
       }
-      /*  состояние открытой бургер кнопки */
-      .first {
-        transform: translate3d(0px, -7px, 0px) rotateZ(-45deg);
+      .burger-lines_first {
+        top:0;
       }
-      .midl {
-        opacity: 0;
+      .burger-lines_second, .burger-lines_third {
+        top:50%;
+        transform: translateY(-50%);
       }
-      .last {
-        transform: rotate(45deg) translate(5px);
+      .burger-lines_fourth {
+        bottom: 0;
       }
+    }
+  }
+
+  .active.burger {
+    .burger-lines_first, .burger-lines_fourth {
+      opacity: 0;
+    }
+    .burger-lines_second {
+      transform: translateY(-50%) rotate(45deg);
+    }
+    .burger-lines_third {
+      transform: translateY(-50%) rotate(-45deg);
     }
   }
 }

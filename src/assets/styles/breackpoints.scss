@@ -48,19 +48,19 @@
 /*----------------------- Mobile first ------------------------------ */
 /*-- d - значит от этого разрешения и ниже -- */
 @mixin mobile-d {
-  @media (max-width: map-get($breakpoints, bp-m)) {
+  @media (max-width: map-get($breakpoints, bp-s)) {
     @content;
   }
 }
 
 @mixin mobile-h-d {
-  @media (max-width: map-get($breakpoints, bp-l)) {
+  @media (max-width: map-get($breakpoints, bp-m)) {
     @content;
   }
 }
 
 @mixin tablet-d {
-  @media (max-width: map-get($breakpoints, bp-xl)) {
+  @media (max-width: map-get($breakpoints, bp-l)) {
     @content;
   }
 }
