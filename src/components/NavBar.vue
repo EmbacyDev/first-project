@@ -55,38 +55,35 @@ export default {
 
 <style scoped lang="scss">
 @include mobile-u {
-  .navBar {
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px $in-100 50px $in-100;
+  background-color: $white-m;
+  .menu {
     display: flex;
     justify-content: space-between;
-    padding: 50px $in-100 50px $in-100;
-    background-color: $white-m;
-    .menu {
+    align-items: center;
+    .logo-w {
+      width: 76px;
+      .logo {
+        max-width: $in-76;
+      }
+    }
+    nav {
+      margin-left: $in-140;
+      width: 268px;
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      .logo-w {
-        width: 76px;
-        .logo {
-          max-width: $in-76;
-        }
+      a {
+        @include newsArticles;
       }
-      nav {
-        margin-left: $in-140;
-        width: 268px;
-        display: flex;
-        justify-content: space-between;
-        a {
-          @include linkHeader;
-        }
-      }
-    }
-    .btn-w {
-      display: flex;
-    }
-    .burger-btn {
-      display: none;
     }
   }
+  .btn-w {
+    display: flex;
+  }
+}
 }
 @include mobile-d {
   .navBar {
