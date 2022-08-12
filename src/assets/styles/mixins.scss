@@ -101,7 +101,7 @@
 }
 
 /*----------------------- Links ------------------------------ */
-@mixin newsArticles {
+@mixin linkArticles {
   @include subtitle;
   text-decoration-line: none;
   &:hover {
@@ -110,7 +110,7 @@
   }
 }
 
-@mixin insideText {
+@mixin linkInside {
   @include body-r($color: $blue-p);
   text-decoration-line: none;
   &:hover {
@@ -119,7 +119,7 @@
   }
 }
 
-@mixin headerMenu {
+@mixin linkHeader {
   @include body-r;
   text-decoration-line: none;
   &:hover {
@@ -128,16 +128,16 @@
   }
 }
 /* Почему-то не работает */
-@mixin linkondarkBG {
-  @include body-r($grenn-p);
+@mixin linkDarkBG {
+  @include body-r($green-p);
   text-decoration-line: underline;
   &:hover {
-    @include body-r($grenn-p);
+    @include body-r($green-p);
     text-decoration-line: none;
   }
 }
 
-@mixin blackLink {
+@mixin linkBlack {
   @include sub-r;
   text-decoration-line: underline;
   &:hover {
@@ -146,7 +146,7 @@
   }
 }
 
-@mixin tabs {
+@mixin linkTabs {
   @include body-r;
   text-decoration-line: none;
   &:hover {
