@@ -71,6 +71,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@include mobile-u {
   button {
     display: flex;
     border: 0;
@@ -78,12 +79,36 @@ export default {
     align-items: center;
     justify-content: center;
     align-content: center;
-    padding: 14px $in-28 14px $in-28;
+    padding: em(14) em(28) em(14) em(28);
+
     span {
-      @include btn-m()
+      @include btn-m();
+      white-space: nowrap;
     }
+
     svg {
-      margin-left: $in-8;
+      margin-left: em(8);
     }
   }
+}
+@include mobile-d {
+  button {
+    display: flex;
+    border: 0;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding: px(14) px(28) px(14) px(28);
+
+    span {
+      @include btn-m();
+      white-space: nowrap;
+    }
+
+    svg {
+      margin-left: px(8);
+    }
+  }
+}
 </style>

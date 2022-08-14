@@ -14,8 +14,7 @@
       </nav>
     </div>
     <div class="btn-w">
-      <main-button style="margin-right: 16px "
-                   title="Log in"
+      <main-button title="Log in"
                    class="solid"
       />
       <main-button title="Add to Chrome"
@@ -58,21 +57,22 @@ export default {
   .navBar {
     display: flex;
     justify-content: space-between;
-    padding: 50px $in-100 50px $in-100;
+    padding: em(50) em($in-100) em(50) em($in-100);
     background-color: $white-m;
     .menu {
+      width: em(483);
       display: flex;
       justify-content: space-between;
       align-items: center;
       .logo-w {
-        width: 76px;
+        width: em(76);
         .logo {
-          max-width: $in-76;
+          max-width: em($in-76);
         }
       }
       nav {
-        margin-left: $in-140;
-        width: 268px;
+        margin: 0 em($in-16) 0 em($in-16);
+        width: em(268);
         display: flex;
         justify-content: space-between;
         a {
@@ -82,6 +82,9 @@ export default {
     }
     .btn-w {
       display: flex;
+      button {
+        margin-right: em($in-16);
+      }
     }
     .burger {
       display: none;
@@ -93,21 +96,21 @@ export default {
     position: relative;
     display: flex;
     justify-content: space-between;
-    padding: $in-20 $in-24 $in-20 $in-24;
+    padding: px($in-20) px($in-24) px($in-20) px($in-24);
     background-color: red;
     .menu {
       display: flex;
       justify-content: space-between;
       align-items: center;
       .logo-w {
-        width: 76px;
+        width: px($in-76);
         .logo {
-          max-width: $in-76;
+          max-width: px($in-76);
         }
       }
       nav.active {
         height: 100%;
-        top: 65px;
+        top: px(65);
         opacity: 100%;
       }
       nav {
@@ -132,8 +135,8 @@ export default {
       flex-direction: column;
     }
     .burger {
-      width: 20px;
-      height: 20px;
+      width: px(20);
+      height: px(20);
       position: relative;
       border: 0;
       padding: 0;
@@ -146,7 +149,7 @@ export default {
         text-indent: 100%;
         overflow: hidden;
         white-space: nowrap;
-        height: 2px;
+        height: px(2);
         background-color: #000;
         width: 100%;
         position: absolute;

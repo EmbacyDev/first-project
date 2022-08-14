@@ -21,5 +21,11 @@ export default {
 </script>
 
 <style lang="scss">
-
+.home {
+  .container {
+    h1 {
+      @include h1($size: em(68));
+    }
+  }
+}
 </style>

@@ -10,93 +10,93 @@
   color: $color;
 }
 
-@mixin h2($color: $black-m) {
+@mixin h2($color: $black-m, $size: 40px, $height: 130%) {
   font: {
     family: EuclidCircularA-SemiBold;
     style: normal;
     weight: 600;
-    size: 40px;
+    size: $size;
   }
-  line-height: 130%;
+  line-height: $height;
   color: $color;
 }
 
-@mixin h3($color: $black-m) {
+@mixin h3($color: $black-m, $size: 28px, $height: 120%) {
   font: {
     family: EuclidCircularA-SemiBold;
     style: normal;
     weight: 600;
-    size: 28px;
+    size: $size;
   }
-  line-height: 120%;
+  line-height: $height;
   color: $color;
 }
 
-@mixin subtitle($color: $black-m) {
+@mixin subtitle($color: $black-m, $size: 28px, $height: 120%) {
   font: {
     family: EuclidCircularA-Medium;
     style: normal;
     weight: 500;
-    size: 20px;
+    size: $size;
   }
-  line-height: 120%;
+  line-height: $height;
   color: $color;
 }
 
-@mixin preheader($color: $black-m) {
+@mixin preheader($color: $black-m, $size: 14px, $height: 100%) {
   font: {
     family: EuclidCircularA-Regular;
     style: normal;
-    size: 14px;
+    size: $size;
     weight: 400;
   }
-  line-height: 100%;
+  line-height: $height;
   color: $color;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
 
-@mixin body-l($color: $black-m) {
+@mixin body-l($color: $black-m, $size: 18px, $height: 160%) {
   font: {
     family: EuclidCircularA-Light;
     style: normal;
     weight: 300;
-    size: 18px;
+    size: $size;
   }
-  line-height: 160%;
+  line-height: $height;
   color: $color;
 }
 
-@mixin body-r($color: $black-m) {
+@mixin body-r($color: $black-m, $size: 16px, $height: 150%) {
   font: {
     family: EuclidCircularA-Regular;
     style: normal;
     weight: 400;
-    size: 16px;
+    size: $size;
   }
-  line-height: 150%;
+  line-height: $height;
   color: $color;
 }
 
-@mixin sub-r($color: $black-m) {
+@mixin sub-r($color: $black-m, $size: 14px, $height: 140%) {
   font: {
     family: EuclidCircularA-Regular;
     style: normal;
     weight: 400;
-    size: 14px;
+    size: $size;
   }
-  line-height: 140%;
+  line-height: $height;
   color: $color;
 }
 
-@mixin btn-m($color: $black-m) {
+@mixin btn-m($color: $black-m, $size: 16px, $height: 120%) {
   font: {
     family: EuclidCircularA-Medium;
     style: normal;
     weight: 400;
-    size: 16px;
+    size: $size;
   }
-  line-height: 120%;
+  line-height: $height;
   color: $color;
 }
 
