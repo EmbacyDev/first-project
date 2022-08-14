@@ -60,8 +60,20 @@
     }
   }
 }
-
-
+Добавил.white {
+  background: $white-m;
+  span {
+    @include btn-m()
+  }
+  &:hover {
+    background: $hover-btn;
+  }
+  &:active {
+    span {
+      opacity: 0.7;
+    }
+  }
+}
 
 
 

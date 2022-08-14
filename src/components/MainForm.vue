@@ -59,18 +59,18 @@ export default {
 
 <style scoped lang="scss">
 .main-form {
-  max-width: 592px;
-  padding: 40px;
+  max-width: px(592);
+  padding: px(40);
   background: #F2F5FC;
 
   .header-form {
     @include h3();
     display: flex;
-    margin-bottom: 40px;
+    margin-bottom: px(40);
   }
 
   .line-form {
-    margin-top: 24px;
+    margin-top: px(24);
 
     label {
       position: relative;
@@ -78,20 +78,20 @@ export default {
       width: 100%;
 
       input {
-        margin-top: 6px;
+        margin-top: px(6);
         border: 0;
       }
 
       .email {
         width: 100%;
-        height: 56px;
+        height: px(56);
       }
 
       .yourself {
         width: 100%;
-        height: 90px;
+        height: px(90);
         resize: none;
-        margin-top: 6px;
+        margin-top: px(6);
         border: 0;
       }
 
@@ -105,9 +105,9 @@ export default {
       }
 
       .img-title {
-        width: 20px;
-        height: 20px;
-        margin-right: 6px;
+        width: px(20);
+        height: px(20);
+        margin-right: px(6);
       }
 
       .upload {
@@ -123,8 +123,8 @@ export default {
 
   button {
     display: flex;
-    padding: 14px 28px 14px 28px;
-    margin-top: 56px;
+    padding: px(14) px(28) px(14) px(28);
+    margin-top: px(56);
     border: 0;
     background: #0432D3;
     color: white;

@@ -127,7 +127,7 @@
     text-decoration-line: none;
   }
 }
-/* Почему-то не работает */
+
 @mixin linkDarkBG {
   @include body-r($green-p);
   text-decoration-line: underline;
