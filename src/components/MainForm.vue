@@ -25,7 +25,7 @@
       <span class="upload-title">Choose a file
         <img class="img-title"
              alt="icon"
-             src="../assets/images/icon.svg">
+             src="../assets/images/svg/iconСlip.svg">
       </span>
       <input name="photo"
              id="upload"

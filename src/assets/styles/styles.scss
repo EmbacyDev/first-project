@@ -60,7 +60,7 @@
     }
   }
 }
-Добавил.white {
+.white {
   background: $white-m;
   span {
     @include btn-m()
@@ -75,6 +75,23 @@
   }
 }
 
+@-webkit-keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
 
 
