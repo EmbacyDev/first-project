@@ -71,7 +71,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@include mobile-u {
+@include tablet-u {
   button {
     display: flex;
     border: 0;
@@ -91,7 +91,7 @@ export default {
     }
   }
 }
-@include mobile-d {
+@include tablet-d {
   button {
     display: flex;
     border: 0;

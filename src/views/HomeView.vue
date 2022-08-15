@@ -17,79 +17,118 @@
         </div>
       </div>
     </div>
-    <div class="move-line-w">
-      <div class="move-line">
-        <div class="line-logo-w">
-          <img class="png"
-               alt="icon"
-               src="../assets/images/png/AliEpress.png">
+    <div class="bg-move-line">
+      <div class="move-line-w">
+        <div class="move-line">
+          <div class="line-logo-w">
+            <img class="png"
+                 alt="icon"
+                 src="../assets/images/png/AliEpress.png">
+          </div>
+          <div class="line-logo-w">
+            <img class="png"
+                 alt="icon"
+                 src="../assets/images/png/Converse.png">
+          </div>
+          <div class="line-logo-w">
+            <img class="png"
+                 alt="icon"
+                 src="../assets/images/png/Ebuyer.png">
+          </div>
+          <div class="line-logo-w">
+            <img class="png"
+                 alt="icon"
+                 src="../assets/images/png/NewLook.png">
+          </div>
+          <div class="line-logo-w">
+            <img class="png"
+                 alt="icon"
+                 src="../assets/images/png/Village.png">
+          </div>
+          <div class="line-logo-w">
+            <img class="png"
+                 alt="icon"
+                 src="../assets/images/png/B&Q.png">
+          </div>
+          <div class="line-logo-w">
+            <img class="png"
+                 alt="icon"
+                 src="../assets/images/png/ienles.png">
+          </div>
         </div>
-        <div class="line-logo-w">
-          <img class="png"
-               alt="icon"
-               src="../assets/images/png/Converse.png">
+        <div class="move-line">
+          <div class="line-logo-w">
+            <img class="png"
+                 alt="icon"
+                 src="../assets/images/png/AliEpress.png">
+          </div>
+          <div class="line-logo-w">
+            <img class="png"
+                 alt="icon"
+                 src="../assets/images/png/Converse.png">
+          </div>
+          <div class="line-logo-w">
+            <img class="png"
+                 alt="icon"
+                 src="../assets/images/png/Ebuyer.png">
+          </div>
+          <div class="line-logo-w">
+            <img class="png"
+                 alt="icon"
+                 src="../assets/images/png/NewLook.png">
+          </div>
+          <div class="line-logo-w">
+            <img class="png"
+                 alt="icon"
+                 src="../assets/images/png/Village.png">
+          </div>
+          <div class="line-logo-w">
+            <img class="png"
+                 alt="icon"
+                 src="../assets/images/png/B&Q.png">
+          </div>
+          <div class="line-logo-w">
+            <img class="png"
+                 alt="icon"
+                 src="../assets/images/png/ienles.png">
+          </div>
         </div>
-        <div class="line-logo-w">
-          <img class="png"
-               alt="icon"
-               src="../assets/images/png/Ebuyer.png">
-        </div>
-        <div class="line-logo-w">
-          <img class="png"
-               alt="icon"
-               src="../assets/images/png/NewLook.png">
-        </div>
-        <div class="line-logo-w">
-          <img class="png"
-               alt="icon"
-               src="../assets/images/png/Village.png">
-        </div>
-        <div class="line-logo-w">
-          <img class="png"
-               alt="icon"
-               src="../assets/images/png/B&Q.png">
-        </div>
-        <div class="line-logo-w">
-          <img class="png"
-               alt="icon"
-               src="../assets/images/png/ienles.png">
-        </div>
-      </div>
-      <div class="move-line">
-        <div class="line-logo-w">
-          <img class="png"
-               alt="icon"
-               src="../assets/images/png/AliEpress.png">
-        </div>
-        <div class="line-logo-w">
-          <img class="png"
-               alt="icon"
-               src="../assets/images/png/Converse.png">
-        </div>
-        <div class="line-logo-w">
-          <img class="png"
-               alt="icon"
-               src="../assets/images/png/Ebuyer.png">
-        </div>
-        <div class="line-logo-w">
-          <img class="png"
-               alt="icon"
-               src="../assets/images/png/NewLook.png">
-        </div>
-        <div class="line-logo-w">
-          <img class="png"
-               alt="icon"
-               src="../assets/images/png/Village.png">
-        </div>
-        <div class="line-logo-w">
-          <img class="png"
-               alt="icon"
-               src="../assets/images/png/B&Q.png">
-        </div>
-        <div class="line-logo-w">
-          <img class="png"
-               alt="icon"
-               src="../assets/images/png/ienles.png">
+        <div class="move-line">
+          <div class="line-logo-w">
+            <img class="png"
+                 alt="icon"
+                 src="../assets/images/png/AliEpress.png">
+          </div>
+          <div class="line-logo-w">
+            <img class="png"
+                 alt="icon"
+                 src="../assets/images/png/Converse.png">
+          </div>
+          <div class="line-logo-w">
+            <img class="png"
+                 alt="icon"
+                 src="../assets/images/png/Ebuyer.png">
+          </div>
+          <div class="line-logo-w">
+            <img class="png"
+                 alt="icon"
+                 src="../assets/images/png/NewLook.png">
+          </div>
+          <div class="line-logo-w">
+            <img class="png"
+                 alt="icon"
+                 src="../assets/images/png/Village.png">
+          </div>
+          <div class="line-logo-w">
+            <img class="png"
+                 alt="icon"
+                 src="../assets/images/png/B&Q.png">
+          </div>
+          <div class="line-logo-w">
+            <img class="png"
+                 alt="icon"
+                 src="../assets/images/png/ienles.png">
+          </div>
         </div>
       </div>
     </div>
@@ -113,7 +152,7 @@ export default {
 <style lang="scss">
 .home {
   .container {
-    padding: 0 em($in-100) 0 em($in-100);
+    padding: 0 em($in-100) em($in-140) em($in-100);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -149,27 +188,40 @@ export default {
       }
     }
   }
-  .move-line-w {
-    width: 100%;
-    height: em(56);
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-  }
-  .move-line {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    -webkit-animation: marquee 10s linear infinite;
-    animation: marquee 10s linear infinite;
-    .line-logo-w {
-      padding-right: em(64);
-      .png {
-        width: em(153);
-        height: em(56);
+
+  .bg-move-line {
+    position: relative;
+    padding-top: em($in-124);
+    padding-bottom: em($in-124);
+    background: $mint-s;
+    clip-path: polygon(0 0, 100% 15%, 100% 85%, 0% 100%);
+    .move-line-w {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .move-line {
+      width: auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding-top: em($in-2);
+      padding-bottom: em($in-2);
+      -webkit-animation: marquee 10s linear infinite;
+      animation: marquee 10s linear infinite;
+
+      .line-logo-w {
+        .png {
+          padding-right: em(64);
+          width: em(153);
+          height: em(56);
+          object-fit: contain;
+        }
       }
     }
   }

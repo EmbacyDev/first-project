@@ -6,6 +6,22 @@
   @return #{$pixels*$context}px;
 }
 /*----------------------- styles ------------------------------ */
+/* scrollBar */
+::-webkit-scrollbar,
+html ::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+}
+::-webkit-scrollbar-track,
+html ::-webkit-scrollbar-track {
+  background: $white-m;
+}
+::-webkit-scrollbar-thumb,
+html ::-webkit-scrollbar-thumb {
+  background-color: $blue-p;
+  border-radius: 1px;
+}
+
 /* buttons */
 .primary {
   background: $blue-p;
@@ -74,7 +90,7 @@
     }
   }
 }
-
+/* move line animation */
 @-webkit-keyframes marquee {
   0% {
     transform: translateX(0%);

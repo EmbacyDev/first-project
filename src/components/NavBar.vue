@@ -53,7 +53,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@include mobile-u {
+@include tablet-u {
   .navBar {
     display: flex;
     justify-content: space-between;
@@ -91,7 +91,7 @@ export default {
     }
   }
 }
-@include mobile-d {
+@include tablet-d {
   .navBar {
     position: relative;
     display: flex;
