@@ -2,6 +2,7 @@
   <nav-bar />
   <router-view />
   <NotificationEmail/>
+  <AutoLoginGoogle/>
 </template>
 
 <script>

@@ -1,11 +1,12 @@
-<!-- eslint-disable vue/max-attributes-per-line -->
 <!-- eslint-disable vuejs-accessibility/form-control-has-label -->
 <template>
   <div class='container'>
     <h3>Subscribe to Slash news</h3>
     <div class='notification'>
       <p>Your email</p>
-      <input type='text' name='user_email' placeholder='Inputname@mail.com'>
+      <input type='text'
+             name='user_email'
+             placeholder='Inputname@mail.com'>
       <button class='subscribe'>
         Subscribe
       </button>
@@ -34,16 +35,16 @@ export default {
     background-color: #fabfe4;
     width: 1200px;
     height: 404px;
-    position: absolute;
     bottom: 0;
+    position: relative;
   }
 
   h3 {
       font-size: 40px;
       left: 52px;
-      position: absolute;
       top: 80px;
       color: #050A1B;
+      position: absolute;
   }
 
   .notification {
