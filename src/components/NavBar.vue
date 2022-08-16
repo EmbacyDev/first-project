@@ -5,7 +5,7 @@
                    to="/">
         <img class="logo"
              alt="icon"
-             src="../assets/images/Slash-icon.png">
+             src="../assets/images/png/Slash-icon.png">
       </router-link>
       <nav :class="{ active: isActive }">
         <router-link to="/brands">Brands</router-link>

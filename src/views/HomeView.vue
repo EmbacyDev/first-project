@@ -285,6 +285,94 @@
         </div>
       </div>
     </div>
+    <div class="bg-container">
+      <div class="container">
+        <div class="h-container-w">
+          <h2>How it works</h2>
+        </div>
+        <div class="grid-two">
+          <div id="item-0-2">
+            <div class="grid-img-w">
+              <img class="jpg"
+                   alt="icon"
+                   src="../assets/images/jpg/grid-2-content-1.jpg">
+            </div>
+          </div>
+          <div id="item-1-2">
+            <div class="grid-img-w">
+              <img class="jpg"
+                   alt="icon"
+                   src="../assets/images/jpg/grid-2-content-2.jpg">
+            </div>
+          </div>
+          <div id="item-2-2">
+            <div class="grid-img-w">
+              <img class="jpg"
+                   alt="icon"
+                   src="../assets/images/jpg/grid-2-content-3.jpg">
+            </div>
+          </div>
+          <div id="item-3-2">
+            <div class="text-grid">
+              <p class="sub-title">Step 1</p>
+              <h3>You buy with a discount</h3>
+              <p>Just shop for your favourite things with<br> Slash and get a guaranteed discount at checkout.</p>
+            </div>
+          </div>
+          <div id="item-4-2">
+            <div class="text-grid">
+              <p class="sub-title">Step 2</p>
+              <h3>We get commission</h3>
+              <p>Slash gets a commission from a brand for<br>bringing new customers,
+                and we turn part of<br>it into your discount.</p>
+            </div>
+          </div>
+          <div id="item-5-2">
+            <div class="text-grid">
+              <p class="sub-title">Step 3</p>
+              <h3>Everyone benefits</h3>
+              <p>You get a discount, merchant gets sales, we<br>get a commission.
+                Perfectly balanced, as all<br>deals should be.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="content-w-2">
+        <div class="text-content-w-2">
+          <h2>Discounts at a snap</h2>
+          <p>Instant price reduction from your favourite brands.<br>
+            Install the free extension for Chrome</p>
+          <main-button title="Add to Chrome"
+                       class="yellow"
+          />
+        </div>
+        <div class="img-content-w-2">
+          <img class="jpg"
+               alt="icon"
+               src="../assets/images/png/Banner-decorative.png">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="content-w-3">
+        <div class="img-content-w-3">
+          <img class="jpg"
+               alt="icon"
+               src="../assets/images/png/Lottie-decorative.png">
+        </div>
+        <div class="text-content-w-3">
+          <h2>Bring a friend</h2>
+          <p>Friends who shop together, save together. Invite a friend<br>
+            and get a £10 bonus discount. Your friend will get a £10<br>
+            discount too.</p>
+          <main-button title="Learn more"
+                       class="solid"
+          />
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -294,6 +382,7 @@ import headerLottie from '@/assets/lottie/heder-lottie.json';
 
 export default {
   name: 'HomeView',
+  components: {},
 
   props: {},
   setup() {
@@ -489,13 +578,9 @@ export default {
   }
 
   .container {
-    .h-container-w {
-      width: 100%;
-
-      h2 {
-        @include h1($size: em(68));
-        align-self: flex-start;
-      }
+    h2 {
+      @include h1($size: em(68));
+      align-self: flex-start;
     }
 
     .content-w {
@@ -555,6 +640,7 @@ export default {
         .grid-img-w {
           width: em(808);
         }
+
         .text-grid {
           display: flex;
           height: 100%;
@@ -562,16 +648,159 @@ export default {
           align-items: flex-start;
           flex-direction: column;
           flex-wrap: nowrap;
+
           h3 {
             @include h3($size: em(28));
           }
+
           h4 {
             @include h3($size: em(28));
           }
+
           p {
             margin-top: em($in-24);
             @include body-l($size: em(18));
           }
+        }
+      }
+    }
+  }
+
+  .bg-container {
+    padding-top: em(140);
+    background: $mint-s;
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 95%);
+    height: auto;
+
+    .container {
+      h2 {
+        @include h2($size: em(40));
+      }
+
+      .grid-two {
+        margin-top: em($in-68);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: em(56) em(56);
+        height: 100%;
+
+        #item-0-2 {
+          grid-row-start: 1;
+          grid-column-start: 1;
+          grid-row-end: 2;
+          grid-column-end: 2;
+        }
+
+        #item-1-2 {
+          grid-row-start: 1;
+          grid-column-start: 2;
+          grid-row-end: 2;
+          grid-column-end: 3;
+        }
+
+        #item-2-2 {
+          grid-row-start: 1;
+          grid-column-start: 3;
+          grid-row-end: 2;
+          grid-column-end: 4;
+        }
+
+        #item-3-2 {
+          grid-row-start: 2;
+          grid-column-start: 1;
+          grid-row-end: 3;
+          grid-column-end: 2;
+        }
+
+        #item-4-2 {
+          grid-row-start: 2;
+          grid-column-start: 2;
+          grid-row-end: 3;
+          grid-column-end: 3;
+        }
+
+        #item-5-2 {
+          grid-row-start: 2;
+          grid-column-start: 3;
+          grid-row-end: 3;
+          grid-column-end: 4;
+        }
+
+        .text-grid {
+          .sub-title {
+            @include preheader($size: em(14))
+          }
+
+          h3 {
+            margin-top: em($in-32);
+            @include h3($size: em(28));
+          }
+
+          p {
+            margin-top: em($in-16);
+            @include body-l($size: em(18));
+          }
+        }
+      }
+    }
+  }
+
+  .container {
+    .content-w-2 {
+      margin-top: em($in-100);
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+      width: 100%;
+      background-color: $blue-p;
+      overflow: hidden;
+
+      .text-content-w-2 {
+        max-width: em(467);
+        margin: em(80) 0 em(80) em(80);
+
+        h2 {
+          @include h2($color: $white-m, $size: em(40));
+        }
+
+        p {
+          margin-top: em($in-32);
+          margin-bottom: em($in-64);
+          @include body-l($color: $white-m, $size: em(18));
+        }
+      }
+
+      .img-content-w-2 {
+        position: absolute;
+        right: 0;
+
+        img {
+          height: em(416);
+        }
+      }
+    }
+  }
+
+  .container {
+    .content-w-3 {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      .img-content-w-3 {
+        width: em(483);
+        height: em(466);
+      }
+      .text-content-w-3 {
+        padding: em($in-100) em($in-100) em($in-100) em($in-100);
+        h2 {
+          @include h2($size: em(40));
+        }
+        p {
+          margin-top: em($in-32);
+          margin-bottom: em($in-64);
+          @include body-l($size: em(18));
         }
       }
     }
