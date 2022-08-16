@@ -3,8 +3,10 @@
     <div class="container">
       <h1>Slash prices, save money, shop smart</h1>
       <div class="headingImg">
-        <img src="../assets/images/graphics-1-display.jpg"
-             alt="decorative">
+        <lottie-animation ref="lottieContainer"
+                          :animationData="headerLottie"
+                          :autoPlay="false"
+                          :loop="false"/>
       </div>
       <div class="info-heading">
         <main-button title="Add to Chrome"
@@ -138,8 +140,8 @@
           <h2>Top deals right now</h2>
           <div class="btn-slider-w">
             <div class="swiper-next">
-              <icon-base  :width="30"
-                          :height="20">
+              <icon-base :width="30"
+                         :height="20">
                 <path fill-rule="evenodd"
                       d="M8.50065.79211 9.9149 2.2063 4.1213
                       8.00018h25.5859v2.00002H4.12138l5.7935
@@ -148,8 +150,8 @@
               </icon-base>
             </div>
             <div class="swiper-prev">
-              <icon-base  :width="30"
-                          :height="20">
+              <icon-base :width="30"
+                         :height="20">
                 <path fill-rule="evenodd"
                       d="m21.4993 17.2079-1.4142-1.4142
                        5.7936-5.79388H.29283v-2H25.8786l-5.7935-5.7935L21.4993.7921l8.2077 8.2077-8.2077 8.2081Z"
@@ -230,10 +232,10 @@
 
 <script>
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import headerLottie from '@/assets/lottie/heder-lottie.json';
 
 export default {
   name: 'HomeView',
-  components: {},
 
   props: {},
   setup() {
@@ -250,6 +252,7 @@ export default {
   },
   data() {
     return {
+      headerLottie,
       NavigationOptions: {
         nextEl: '.swiper-next',
         prevEl: '.swiper-prev'
@@ -259,7 +262,18 @@ export default {
   },
   computed: {},
   watch: {},
-  methods: {}
+  mounted() {
+    window.addEventListener('scroll', this.scrollHandle);
+  },
+  deactivated() {
+    window.removeEventListener('scroll', this.scrollHandle);
+  },
+  methods: {
+    scrollHandle() {
+      this.$refs.lottieContainer.play();
+      console.log('scroll');
+    }
+  }
 };
 </script>
 
@@ -279,6 +293,7 @@ export default {
     }
 
     .headingImg {
+      width: 100%;
       margin-top: em(60);
 
       img {
@@ -290,7 +305,7 @@ export default {
       display: flex;
       align-self: flex-start;
       align-items: center;
-      margin-top: em($in-140);
+      margin-top: em($in-84);
 
       .max-width-496 {
         display: flex;
@@ -363,6 +378,7 @@ export default {
 
       .btn-slider-w {
         display: flex;
+
         .swiper-prev, .swiper-next {
           width: em(48);
           display: flex;
@@ -371,6 +387,7 @@ export default {
           align-content: center;
           padding: em($in-16) em($in-10) em($in-16) em($in-10);
           cursor: pointer;
+
           &:hover {
             color: $gray-m;
           }

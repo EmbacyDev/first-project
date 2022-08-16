@@ -3,6 +3,7 @@ import MainForm from '@/components/MainForm';
 import MainButton from '@/components/MainButton';
 import iconBase from '@/components/IconBase';
 import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Vue3Lottie } from 'vue3-lottie';
 
 export default [
   NavBar,
@@ -10,5 +11,6 @@ export default [
   MainButton,
   iconBase,
   Swiper,
-  SwiperSlide
+  SwiperSlide,
+  Vue3Lottie
 ];
