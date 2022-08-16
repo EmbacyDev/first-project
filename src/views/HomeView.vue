@@ -169,12 +169,13 @@
                 :navigation="NavigationOptions"
                 :pagination="false"
                 :scrollbar="false"
-                :modules="modules"
-                @swiper="onSwiper"
-                @slideChange="onSlideChange">
+                :modules="modules">
           <swiper-slide>
             <div class="cads">
               <div class="img-slide-w">
+                <div class="sale-title">
+                  <p>up to 7%</p>
+                </div>
                 <img class="jpg"
                      alt="icon"
                      src="../assets/images/jpg/Sale-slide-1.jpg">
@@ -188,6 +189,9 @@
           <swiper-slide>
             <div class="cads">
               <div class="img-slide-w">
+                <div class="sale-title">
+                  <p>up to 10%</p>
+                </div>
                 <img class="jpg"
                      alt="icon"
                      src="../assets/images/jpg/Sale-slide-2.jpg">
@@ -201,6 +205,9 @@
           <swiper-slide>
             <div class="cads">
               <div class="img-slide-w">
+                <div class="sale-title">
+                  <p>up to 6%</p>
+                </div>
                 <img class="jpg"
                      alt="icon"
                      src="../assets/images/jpg/Sale-slide-3.jpg">
@@ -214,6 +221,9 @@
           <swiper-slide>
             <div class="cads">
               <div class="img-slide-w">
+                <div class="sale-title">
+                  <p>up to 7%</p>
+                </div>
                 <img class="jpg"
                      alt="icon"
                      src="../assets/images/jpg/Sale-slide-4.jpg">
@@ -225,6 +235,54 @@
             </div>
           </swiper-slide>
         </swiper>
+      </div>
+    </div>
+    <div class="container">
+      <div class="h-container-w">
+        <h2>Shop smart with Slash</h2>
+      </div>
+      <div class="content-w">
+        <div class="grid-one">
+          <div id="item-0">
+            <div class="grid-img-w">
+              <img class="jpg"
+                   alt="icon"
+                   src="../assets/images/jpg/grid-content-1.jpg">
+            </div>
+          </div>
+          <div id="item-1">
+            <div class="text-grid">
+              <h3>Guaranteed</h3>
+              <p>No promo codes or cashback - simply<br>receive a guaranteed price reduction at<br>checkout</p>
+            </div>
+          </div>
+          <div id="item-2">
+            <div class="text-grid">
+              <h3>Always with you</h3>
+              <p>Don’t spend hours looking for discounts -<br>just install the extension and shop away!</p>
+            </div>
+          </div>
+          <div id="item-3">
+            <div class="grid-img-w">
+              <img class="jpg"
+                   alt="icon"
+                   src="../assets/images/jpg/grid-content-2.jpg">
+            </div>
+          </div>
+          <div id="item-4">
+            <div class="text-grid">
+              <h3>Instant</h3>
+              <p>Tired of waiting for cashback? With Slash<br>your benefits and clear and immediate</p>
+            </div>
+          </div>
+          <div id="item-5">
+            <div class="grid-img-w">
+              <img class="jpg"
+                   alt="icon"
+                   src="../assets/images/jpg/grid-content-3.jpg">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -239,16 +297,7 @@ export default {
 
   props: {},
   setup() {
-    const onSwiper = swiper => {
-      console.log(swiper);
-    };
-    const onSlideChange = () => {
-      console.log('slide change');
-    };
-    return {
-      onSwiper,
-      onSlideChange
-    };
+    return {};
   },
   data() {
     return {
@@ -265,13 +314,13 @@ export default {
   mounted() {
     window.addEventListener('scroll', this.scrollHandle);
   },
-  deactivated() {
+  unmounted() {
     window.removeEventListener('scroll', this.scrollHandle);
   },
   methods: {
     scrollHandle() {
       this.$refs.lottieContainer.play();
-      console.log('scroll');
+      // console.log('scroll');
     }
   }
 };
@@ -279,14 +328,7 @@ export default {
 
 <style lang="scss">
 .home {
-  min-width: 0;
-
   .container {
-    padding: 0 em($in-100) em($in-140) em($in-100);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
     h1 {
       @include h1($size: em(68));
       align-self: flex-start;
@@ -295,10 +337,6 @@ export default {
     .headingImg {
       width: 100%;
       margin-top: em(60);
-
-      img {
-        width: 100%;
-      }
     }
 
     .info-heading {
@@ -352,7 +390,6 @@ export default {
           padding-right: em(64);
           width: em(153);
           height: em(56);
-          object-fit: contain;
         }
       }
     }
@@ -396,7 +433,6 @@ export default {
     }
 
     .swiper {
-      margin-bottom: em($in-140);
       width: 100%;
       height: 100%;
 
@@ -404,11 +440,31 @@ export default {
         width: auto;
 
         .cads {
+          cursor: pointer;
+
           .img-slide-w {
+            position: relative;
+
+            .sale-title {
+              position: absolute;
+              right: em(16);
+              top: em(16);
+              background: $white-m;
+              /* Сверху | Справа | Снизу | Слева */
+              padding: em(12) em(18) em(12) em(18);
+              z-index: 1;
+
+              p {
+                @include subtitle($size: em(20));
+              }
+            }
+
             img {
-              display: block;
-              width: 100%;
-              object-fit: contain;
+              transition: all 0.2s 0s ease;
+
+              &:hover {
+                transform: scale(1.1);
+              }
             }
           }
 
@@ -426,6 +482,95 @@ export default {
               margin-top: em($in-8);
               @include body-r($color: $gray-m, $size: em(16));
             }
+          }
+        }
+      }
+    }
+  }
+
+  .container {
+    .h-container-w {
+      width: 100%;
+
+      h2 {
+        @include h1($size: em(68));
+        align-self: flex-start;
+      }
+    }
+
+    .content-w {
+      margin-top: em(65);
+
+      .grid-one {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        /* гориз. отступ | вертик. отступ */
+        gap: em(56) em(32);
+        height: 100%;
+
+        #item-0 {
+          grid-row-start: 1;
+          grid-column-start: 1;
+          grid-row-end: 2;
+          grid-column-end: 3;
+        }
+
+        #item-1 {
+          grid-row-start: 1;
+          grid-column-start: 3;
+          grid-row-end: 2;
+          grid-column-end: 4;
+        }
+
+        #item-2 {
+          grid-row-start: 2;
+          grid-column-start: 1;
+          grid-row-end: 3;
+          grid-column-end: 2;
+        }
+
+        #item-3 {
+          grid-row-start: 2;
+          grid-column-start: 2;
+          grid-row-end: 3;
+          grid-column-end: 4;
+        }
+
+        #item-4 {
+          grid-row-start: 3;
+          grid-column-start: 3;
+          grid-row-end: 4;
+          grid-column-end: 4;
+
+        }
+
+        #item-5 {
+          grid-row-start: 3;
+          grid-column-start: 1;
+          grid-row-end: 4;
+          grid-column-end: 3;
+        }
+
+        .grid-img-w {
+          width: em(808);
+        }
+        .text-grid {
+          display: flex;
+          height: 100%;
+          justify-content: center;
+          align-items: flex-start;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          h3 {
+            @include h3($size: em(28));
+          }
+          h4 {
+            @include h3($size: em(28));
+          }
+          p {
+            margin-top: em($in-24);
+            @include body-l($size: em(18));
           }
         }
       }
