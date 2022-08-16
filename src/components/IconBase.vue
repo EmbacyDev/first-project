@@ -3,7 +3,8 @@
        :width="width"
        :height="height"
        :viewBox="viewBox"
-       :aria-labelledby="iconName">
+       :aria-labelledby="iconName"
+       fill="none">
     <title
       :id="iconName"
       lang="en"
@@ -37,7 +38,7 @@ export default {
   },
   computed: {
     viewBox() {
-      return `"0 0 ${this.width} ${this.height} "`;
+      return `0 0 ${this.width} ${this.height}`;
     }
   }
 };

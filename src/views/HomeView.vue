@@ -136,16 +136,35 @@
       <div class="slider-w">
         <div class="h2-w">
           <h2>Top deals right now</h2>
-          <div class="swiper-prev"/>
-          <div class="swiper-next"/>
+          <div class="btn-slider-w">
+            <div class="swiper-next">
+              <icon-base  :width="30"
+                          :height="20">
+                <path fill-rule="evenodd"
+                      d="M8.50065.79211 9.9149 2.2063 4.1213
+                      8.00018h25.5859v2.00002H4.12138l5.7935
+                      5.7935-1.41421 1.4142-8.2077-8.2077L8.50065.79211Z"
+                      clip-rule="evenodd"/>
+              </icon-base>
+            </div>
+            <div class="swiper-prev">
+              <icon-base  :width="30"
+                          :height="20">
+                <path fill-rule="evenodd"
+                      d="m21.4993 17.2079-1.4142-1.4142
+                       5.7936-5.79388H.29283v-2H25.8786l-5.7935-5.7935L21.4993.7921l8.2077 8.2077-8.2077 8.2081Z"
+                      clip-rule="evenodd"/>
+              </icon-base>
+            </div>
+          </div>
         </div>
-        <swiper :options="swiperOption"
-                :slidesPerView="4"
+        <swiper :slidesPerView="4"
                 :space-between="56"
                 :setWrapperSize="true"
                 :autoHeight="true"
                 :loop="true"
                 :loopFillGroupWithBlank="true"
+                :navigation="NavigationOptions"
                 :pagination="false"
                 :scrollbar="false"
                 :modules="modules"
@@ -214,6 +233,8 @@ import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
 export default {
   name: 'HomeView',
+  components: {},
+
   props: {},
   setup() {
     const onSwiper = swiper => {
@@ -229,19 +250,9 @@ export default {
   },
   data() {
     return {
-      swiperOption: {
-        navigation: {
-          nextEl: '.swiper-next',
-          prevEl: '.swiper-prev'
-        },
-        slidesPerView: 4,
-        spaceBetween: 56,
-        setWrapperSize: true,
-        autoHeight: true,
-        loop: true,
-        loopFillGroupWithBlank: true,
-        pagination: false,
-        scrollbar: false
+      NavigationOptions: {
+        nextEl: '.swiper-next',
+        prevEl: '.swiper-prev'
       },
       modules: [Navigation, Pagination, Scrollbar, A11y]
     };
@@ -342,11 +353,28 @@ export default {
 
     .h2-w {
       display: flex;
-      padding: em($in-140) em($in-100) em($in-68) 0;
+      justify-content: space-between;
+      padding: em($in-140) 0 em($in-68) 0;
 
       h2 {
         @include h2($size: em(40));
         align-self: flex-start;
+      }
+
+      .btn-slider-w {
+        display: flex;
+        .swiper-prev, .swiper-next {
+          width: em(48);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          align-content: center;
+          padding: em($in-16) em($in-10) em($in-16) em($in-10);
+          cursor: pointer;
+          &:hover {
+            color: $gray-m;
+          }
+        }
       }
     }
 
@@ -357,6 +385,7 @@ export default {
 
       .swiper-slide {
         width: auto;
+
         .cads {
           .img-slide-w {
             img {
