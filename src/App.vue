@@ -1,6 +1,7 @@
 <template>
   <nav-bar />
   <router-view />
+  <main-footer/>
 </template>
 
 <script>

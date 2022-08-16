@@ -64,12 +64,6 @@ export default {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      .logo-w {
-        width: em(76);
-        .logo {
-          max-width: em($in-76);
-        }
-      }
       nav {
         margin: 0 em($in-16) 0 em($in-16);
         width: em(268);

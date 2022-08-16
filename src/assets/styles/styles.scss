@@ -5,11 +5,12 @@
 @function px($pixels, $context: $browser-context-px) {
   @return #{$pixels*$context}px;
 }
+
 /*----------------------- styles ------------------------------ */
 body {
   font-size: 1.1111111111111112vw;
 }
-section {}
+
 .container {
   padding: 0 em($in-100) em($in-140) em($in-100);
   display: flex;
@@ -17,11 +18,25 @@ section {}
   //max-width: 1440px;
   margin: auto;
 }
+
 img {
   display: block;
   width: 100%;
   object-fit: contain;
 }
+
+.logo-w {
+  width: em(76);
+
+  .logo {
+    max-width: em($in-76);
+  }
+}
+
+a {
+  white-space: nowrap
+}
+
 .h-container-w {
   width: 100%;
 }
@@ -32,10 +47,12 @@ html ::-webkit-scrollbar {
   height: 5px;
   width: 5px;
 }
+
 ::-webkit-scrollbar-track,
 html ::-webkit-scrollbar-track {
   background: $white-m;
 }
+
 ::-webkit-scrollbar-thumb,
 html ::-webkit-scrollbar-thumb {
   background-color: $blue-p;
@@ -96,6 +113,7 @@ html ::-webkit-scrollbar-thumb {
     }
   }
 }
+
 .white {
   background: $white-m;
   span {
@@ -110,6 +128,7 @@ html ::-webkit-scrollbar-thumb {
     }
   }
 }
+
 /* move line animation */
 @-webkit-keyframes marquee {
   0% {
@@ -127,12 +146,5 @@ html ::-webkit-scrollbar-thumb {
   100% {
     transform: translateX(-100%);
   }
-}
-
-.container {
-  padding: 0 em($in-100) em($in-140) em($in-100);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
