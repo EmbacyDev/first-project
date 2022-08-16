@@ -4,6 +4,11 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 
+import 'swiper/scss';
+import 'swiper/scss/navigation';
+import 'swiper/scss/pagination';
+import 'swiper/scss/scrollbar';
+
 const app = createApp(App);
 
 components.forEach(component => {

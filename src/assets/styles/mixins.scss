@@ -32,7 +32,7 @@
   color: $color;
 }
 
-@mixin subtitle($color: $black-m, $size: 28px, $height: 120%) {
+@mixin subtitle($color: $black-m, $size: 20px, $height: 120%) {
   font: {
     family: EuclidCircularA-Medium;
     style: normal;

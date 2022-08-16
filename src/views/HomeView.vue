@@ -132,16 +132,119 @@
         </div>
       </div>
     </div>
+    <div class="container">
+      <div class="slider-w">
+        <div class="h2-w">
+          <h2>Top deals right now</h2>
+          <div class="swiper-prev"/>
+          <div class="swiper-next"/>
+        </div>
+        <swiper :options="swiperOption"
+                :slidesPerView="4"
+                :space-between="56"
+                :setWrapperSize="true"
+                :autoHeight="true"
+                :loop="true"
+                :loopFillGroupWithBlank="true"
+                :pagination="false"
+                :scrollbar="false"
+                :modules="modules"
+                @swiper="onSwiper"
+                @slideChange="onSlideChange">
+          <swiper-slide>
+            <div class="cads">
+              <div class="img-slide-w">
+                <img class="jpg"
+                     alt="icon"
+                     src="../assets/images/jpg/Sale-slide-1.jpg">
+              </div>
+              <div class="text-slide">
+                <p class="first-text-slide">Xbox gamepad</p>
+                <p class="second-text-slide">Aliexpress</p>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="cads">
+              <div class="img-slide-w">
+                <img class="jpg"
+                     alt="icon"
+                     src="../assets/images/jpg/Sale-slide-2.jpg">
+              </div>
+              <div class="text-slide">
+                <p class="first-text-slide">Winter Collection</p>
+                <p class="second-text-slide">Converse</p>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="cads">
+              <div class="img-slide-w">
+                <img class="jpg"
+                     alt="icon"
+                     src="../assets/images/jpg/Sale-slide-3.jpg">
+              </div>
+              <div class="text-slide">
+                <p class="first-text-slide">HP 250 G8 Intel Core i5</p>
+                <p class="second-text-slide">Ebuyer</p>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="cads">
+              <div class="img-slide-w">
+                <img class="jpg"
+                     alt="icon"
+                     src="../assets/images/jpg/Sale-slide-4.jpg">
+              </div>
+              <div class="text-slide">
+                <p class="first-text-slide">Keeping warm</p>
+                <p class="second-text-slide">New Look</p>
+              </div>
+            </div>
+          </swiper-slide>
+        </swiper>
+      </div>
+    </div>
   </section>
 </template>
 
 <script>
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
 export default {
   name: 'HomeView',
   props: {},
+  setup() {
+    const onSwiper = swiper => {
+      console.log(swiper);
+    };
+    const onSlideChange = () => {
+      console.log('slide change');
+    };
+    return {
+      onSwiper,
+      onSlideChange
+    };
+  },
   data() {
-    return {};
+    return {
+      swiperOption: {
+        navigation: {
+          nextEl: '.swiper-next',
+          prevEl: '.swiper-prev'
+        },
+        slidesPerView: 4,
+        spaceBetween: 56,
+        setWrapperSize: true,
+        autoHeight: true,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: false,
+        scrollbar: false
+      },
+      modules: [Navigation, Pagination, Scrollbar, A11y]
+    };
   },
   computed: {},
   watch: {},
@@ -151,6 +254,8 @@ export default {
 
 <style lang="scss">
 .home {
+  min-width: 0;
+
   .container {
     padding: 0 em($in-100) em($in-140) em($in-100);
     display: flex;
@@ -195,6 +300,7 @@ export default {
     padding-bottom: em($in-124);
     background: $mint-s;
     clip-path: polygon(0 0, 100% 15%, 100% 85%, 0% 100%);
+
     .move-line-w {
       width: 100%;
       height: auto;
@@ -221,6 +327,60 @@ export default {
           width: em(153);
           height: em(56);
           object-fit: contain;
+        }
+      }
+    }
+  }
+
+  .slider-w {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+    min-width: 0;
+    min-height: 0;
+
+    .h2-w {
+      display: flex;
+      padding: em($in-140) em($in-100) em($in-68) 0;
+
+      h2 {
+        @include h2($size: em(40));
+        align-self: flex-start;
+      }
+    }
+
+    .swiper {
+      margin-bottom: em($in-140);
+      width: 100%;
+      height: 100%;
+
+      .swiper-slide {
+        width: auto;
+        .cads {
+          .img-slide-w {
+            img {
+              display: block;
+              width: 100%;
+              object-fit: contain;
+            }
+          }
+
+          .text-slide {
+            display: flex;
+            flex-direction: column;
+            align-items: self-start;
+            margin-top: em($in-32);
+
+            .first-text-slide {
+              @include subtitle($size: em(20));
+            }
+
+            .second-text-slide {
+              margin-top: em($in-8);
+              @include body-r($color: $gray-m, $size: em(16));
+            }
+          }
         }
       }
     }
