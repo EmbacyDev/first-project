@@ -4,6 +4,7 @@ import MainButton from '@/components/MainButton';
 import iconBase from '@/components/IconBase';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Vue3Lottie } from 'vue3-lottie';
+import MainFooter from '@/components/MainFooter';
 
 export default [
   NavBar,
@@ -12,5 +13,6 @@ export default [
   iconBase,
   Swiper,
   SwiperSlide,
-  Vue3Lottie
+  Vue3Lottie,
+  MainFooter
 ];
