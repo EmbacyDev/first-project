@@ -9,10 +9,22 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/about',
-    name: 'about',
+    path: '/brands',
+    name: 'brands',
     props: true,
-    component: () => import('../views/AboutView.vue')
+    component: () => import('../views/BrandsView.vue')
+  },
+  {
+    path: '/career',
+    name: 'career',
+    props: true,
+    component: () => import('../views/CareerView.vue')
+  },
+  {
+    path: '/blog',
+    name: 'blog',
+    props: true,
+    component: () => import('../views/BlogView.vue')
   }
 ];
 

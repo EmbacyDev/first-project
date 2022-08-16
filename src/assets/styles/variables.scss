@@ -1,6 +1,90 @@
-$main-padding: 4px;
-$main-margin: 4px;
-$main-radius: 4px;
-$main-color: #2ec2a6;
-$main-size: 30px;
+/*----------------------- fonts ------------------------------ */
+@font-face {
+  font-family: 'EuclidCircularA-Regular';
+  src: url('@/assets/fonts/EuclidCircularA/EuclidCircularA-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'EuclidCircularA-SemiBold';
+  src: url('@/assets/fonts/EuclidCircularA/EuclidCircularA-SemiBold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'EuclidCircularA-Bold';
+  src: url('@/assets/fonts/EuclidCircularA/EuclidCircularA-Bold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'EuclidCircularA-Medium';
+  src: url('@/assets/fonts/EuclidCircularA/EuclidCircularA-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'EuclidCircularA-Light';
+  src: url('@/assets/fonts/EuclidCircularA/EuclidCircularA-Light.woff2') format('woff2');
+}
 
+/*----------------------- breakpoints ------------------------------ */
+$breakpoints: (
+        bp-xl : 1440px,
+        bp-l : 991px,
+        bp-m: 767px,
+        bp-s : 479px,
+);
+
+/*----------------------- indents ------------------------------ */
+$in-2: 2px;
+$in-4: 4px;
+$in-6: 6px;
+$in-8: 8px;
+$in-10: 10px;
+$in-12: 12px;
+$in-16: 16px;
+$in-20: 20px;
+$in-24: 24px;
+$in-28: 28px;
+$in-32: 32px;
+$in-36: 36px;
+$in-40: 40px;
+$in-44: 44px;
+$in-48: 48px;
+$in-52: 52px;
+$in-56: 56px;
+$in-60: 60px;
+$in-64: 64px;
+$in-68: 68px;
+$in-72: 72px;
+$in-76: 76px;
+$in-80: 80px;
+$in-84: 84px;
+$in-100: 100px;
+$in-140: 140px;
+
+/*----------------------- Colors ------------------------------ */
+/* Primary colors */
+$blue-p: #0432D3;
+$pink-p: #FFA3DA;
+$green-p:  #56E58F;
+$yellow-p: #FFEA32;
+
+/* Secondary colors */
+$blue-s: #CDE7FF;
+$pink-s: #FFDBF1;
+$green-s: #A2EDC0;
+$yellow-s: #FFF7AF;
+$mint-s: #ECF8F8;
+
+/* Monochrome colors */
+$black-m: #050A1B;
+$white-m: #FFFFFF;
+$gray-m: #A6ACBB;
+
+/* Button effects */
+$error-btn: #FF92A5;
+$hover-btn: #1B4DFF;
+$active-btn: #0024A4;
+$disabled-btn: #D9DEEA;
+
+/* Form colors */
+$icon-f: #98ABD9;
+$stroke-f: #D0D9EF;
+$error-f: #FFEEF1;
+$input-default-f: #F2F5FC;
+$error-solid-f: #EC2247;
+$toolips-f: #121625;

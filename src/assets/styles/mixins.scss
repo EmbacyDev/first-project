@@ -1,53 +1,156 @@
-@import "variables.scss";
-
-@mixin large-text {
+/*----------------------- Typography Desktop ------------------------------ */
+@mixin h1($color: $black-m, $size: 68px, $height: 110%) {
   font: {
-    family: Avenir, Helvetica, Arial, sans-serif;
-    size: $main-size;
-    weight: bold;
+    family: EuclidCircularA-SemiBold;
+    style: normal;
+    size: $size;
+    weight: 600;
   }
-  color: white;
+  line-height: $height;
+  color: $color;
 }
 
-@mixin main-border ($color, $width) {
-  border: {
-    color: $color;
-    width: $width;
-    style: dashed;
-  }
-}
-
-@mixin left-colum {
-  display: flex;
-  flex-direction: column;
-  align-content: stretch;
-  align-items: flex-start;
-}
-
-@mixin label-text {
+@mixin h2($color: $black-m) {
   font: {
-    weight: 400;
-    size: 14px;
+    family: EuclidCircularA-SemiBold;
+    style: normal;
+    weight: 600;
+    size: 40px;
   }
-  line-height: 140%;
-  color: #050A1B;
+  line-height: 130%;
+  color: $color;
 }
 
-@mixin btn-text {
+@mixin h3($color: $black-m) {
   font: {
-    weight: 400;
-    size: 16px;
-  }
-  line-height: 120%;
-  color: #0432D3;
-}
-
-@mixin h3 {
-  font: {
+    family: EuclidCircularA-SemiBold;
+    style: normal;
     weight: 600;
     size: 28px;
   }
   line-height: 120%;
-  margin: 0;
-  color: #050A1B;
+  color: $color;
+}
+
+@mixin subtitle($color: $black-m) {
+  font: {
+    family: EuclidCircularA-Medium;
+    style: normal;
+    weight: 500;
+    size: 20px;
+  }
+  line-height: 120%;
+  color: $color;
+}
+
+@mixin preheader($color: $black-m) {
+  font: {
+    family: EuclidCircularA-Regular;
+    style: normal;
+    size: 14px;
+    weight: 400;
+  }
+  line-height: 100%;
+  color: $color;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+@mixin body-l($color: $black-m) {
+  font: {
+    family: EuclidCircularA-Light;
+    style: normal;
+    weight: 300;
+    size: 18px;
+  }
+  line-height: 160%;
+  color: $color;
+}
+
+@mixin body-r($color: $black-m) {
+  font: {
+    family: EuclidCircularA-Regular;
+    style: normal;
+    weight: 400;
+    size: 16px;
+  }
+  line-height: 150%;
+  color: $color;
+}
+
+@mixin sub-r($color: $black-m) {
+  font: {
+    family: EuclidCircularA-Regular;
+    style: normal;
+    weight: 400;
+    size: 14px;
+  }
+  line-height: 140%;
+  color: $color;
+}
+
+@mixin btn-m($color: $black-m) {
+  font: {
+    family: EuclidCircularA-Medium;
+    style: normal;
+    weight: 400;
+    size: 16px;
+  }
+  line-height: 120%;
+  color: $color;
+}
+
+/*----------------------- Links ------------------------------ */
+@mixin linkArticles {
+  @include subtitle;
+  text-decoration-line: none;
+  &:hover {
+    @include subtitle($blue-p);
+    text-decoration-line: underline;
+  }
+}
+
+@mixin linkInside {
+  @include body-r($color: $blue-p);
+  text-decoration-line: none;
+  &:hover {
+    @include body-r($blue-p);
+    text-decoration-line: underline;
+  }
+}
+
+@mixin linkHeader {
+  @include body-r;
+  text-decoration-line: none;
+  &:hover {
+    @include body-r($blue-p);
+    text-decoration-line: none;
+  }
+}
+/* Почему-то не работает */
+@mixin linkDarkBG {
+  @include body-r($green-p);
+  text-decoration-line: underline;
+  &:hover {
+    @include body-r($green-p);
+    text-decoration-line: none;
+  }
+}
+
+@mixin linkBlack {
+  @include sub-r;
+  text-decoration-line: underline;
+  &:hover {
+    @include sub-r;
+    text-decoration-line: none;
+  }
+}
+
+@mixin linkTabs {
+  @include body-r;
+  text-decoration-line: none;
+  &:hover {
+    @include body-r ($blue-p);
+    text-decoration-line: underline;
+  }
 }

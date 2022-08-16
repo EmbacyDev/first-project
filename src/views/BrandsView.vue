@@ -1,16 +1,16 @@
 <template>
-  <div class="home">
-    <h1>This is an <strong>home</strong> page</h1>
-    <main-button/>
-    <main-form/>
+  <div class="brands">
+    <h1>This is an <strong>brands</strong> page</h1>
   </div>
 </template>
-
 <script>
+
 export default {
-  name: 'HomeView',
-  props: {
+  name: 'BrandsView',
+  components: {
+
   },
+  props: {},
   data() {
     return {};
   },
@@ -21,5 +21,4 @@ export default {
 </script>
 
 <style lang="scss">
-
 </style>

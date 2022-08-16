@@ -1,14 +1,61 @@
-@import "mixins.scss";
-
-@media (min-width: 480px) {}
-
-@media (min-width: 768px) {}
-
-@media (min-width: 990px) {}
-
-@media (min-width: 1440px) {
-  $browser-context: 16; // Default
-  @function em($pixels, $context: $browser-context) {
-    @return #{$pixels/$context}em;
+/*----------------------- styles ------------------------------ */
+/* buttons */
+.primary {
+  background: $blue-p;
+  span {
+    @include btn-m($white-m)
+  }
+  &:hover {
+    background: $hover-btn;
+  }
+  &:active {
+    background: $active-btn;
+    span {
+      opacity: 0.7;
+    }
   }
 }
+
+.solid {
+  background: $white-m;
+  color: $blue-p;
+  border: 1px solid $blue-p;
+  span {
+    @include btn-m($blue-p)
+  }
+  &:hover {
+    border: 1px solid $hover-btn;
+    color: $hover-btn;
+    span {
+      @include btn-m($hover-btn)
+    }
+  }
+  &:active {
+    border: 1px solid $active-btn;
+    color: $active-btn;
+    span {
+      @include btn-m($active-btn)
+    }
+  }
+}
+
+.yellow {
+  background: $yellow-p;
+  span {
+    @include btn-m($blue-p)
+  }
+  &:hover {
+    background: $yellow-s;
+  }
+  &:active {
+    span {
+      opacity: 0.7;
+    }
+  }
+}
+
+
+
+
+
+
