@@ -102,55 +102,50 @@
 
 /*----------------------- Links ------------------------------ */
 @mixin linkArticles {
-  @include subtitle;
   text-decoration-line: none;
+  color: $black-m;
   &:hover {
-    @include subtitle($blue-p);
+    color: $blue-p;
     text-decoration-line: underline;
   }
 }
 
 @mixin linkInside {
-  @include body-r($color: $blue-p);
+  color: $blue-p;
   text-decoration-line: none;
   &:hover {
-    @include body-r($blue-p);
+    color: $blue-p;
     text-decoration-line: underline;
   }
 }
 
 @mixin linkHeader {
-  @include body-r;
+  color: $black-m;
   text-decoration-line: none;
   &:hover {
-    @include body-r($blue-p);
+    color: $blue-p;
     text-decoration-line: none;
   }
 }
 
 @mixin linkDarkBG {
-  @include body-r($green-p);
   text-decoration-line: underline;
   &:hover {
-    @include body-r($green-p);
     text-decoration-line: none;
   }
 }
 
 @mixin linkBlack {
-  @include sub-r;
   text-decoration-line: underline;
   &:hover {
-    @include sub-r;
     text-decoration-line: none;
   }
 }
 
 @mixin linkTabs {
-  @include body-r;
   text-decoration-line: none;
   &:hover {
-    @include body-r ($blue-p);
+    color: $blue-p;
     text-decoration-line: underline;
   }
 }

@@ -72,12 +72,13 @@ export default {
         justify-content: space-between;
         a {
           @include linkHeader;
+          @include body-r($size: em(16))
         }
       }
     }
     .btn-w {
       display: flex;
-      button {
+      .solid {
         margin-right: em($in-16);
       }
     }
@@ -121,6 +122,7 @@ export default {
         align-items: flex-start;
         background: white;
         a {
+          @include body-r($size: px(16));
           @include linkHeader;
         }
       }

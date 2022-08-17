@@ -4,6 +4,8 @@
   </div>
   <auto-button :iconsType="1"
                class="google-btn"/>
+  <auto-button :iconsType="2"
+               class="facebook-btn"/>
 </template>
 <script>
 

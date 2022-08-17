@@ -36,8 +36,8 @@
       <div class="social-block">
         <p>Follow us</p>
         <div class="social-link-w">
-          <icon-base :width="24"
-                     :height="24">
+          <icon-base :iconWidth="24"
+                     :iconHeight="24">
             <path d="M24 0 0 0C0 .375 0 .429 0 .96L0 24C.75 24 .429 24 .96 24L23.04 24C23.571 24 23.625 24 24 24L24 .531C24 0 24 .375 24 0ZM20.268 7.005 18.351 7.005C16.848 7.005 16.557 7.719 16.557 8.769L16.557 11.082 20.145 11.082 19.677 14.703 16.557 14.703V24H12.816L12.816 14.706H9.687V11.082H12.816V8.412C12.816 5.313 14.709 3.624 17.475 3.624 18.801 3.624 19.938 3.723 20.271 3.768V7.005H20.268Z"
                   fill="#0432D3"/>
           </icon-base>
@@ -101,6 +101,7 @@ export default {
 
       a {
         @include linkHeader;
+        @include body-r($size: em(16))
       }
     }
 
@@ -113,6 +114,7 @@ export default {
 
       a {
         @include linkHeader;
+        @include body-r($size: em(16))
       }
     }
 
@@ -135,6 +137,7 @@ export default {
       }
 
       a {
+        @include body-r($size: em(16));
         @include linkInside;
       }
     }

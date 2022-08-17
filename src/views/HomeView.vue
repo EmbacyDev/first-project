@@ -140,8 +140,8 @@
           <h2>Top deals right now</h2>
           <div class="btn-slider-w">
             <div class="swiper-next">
-              <icon-base :width="30"
-                         :height="20">
+              <icon-base :iconWidth="30"
+                         :iconHeight="20">
                 <path fill-rule="evenodd"
                       d="M8.50065.79211 9.9149 2.2063 4.1213
                       8.00018h25.5859v2.00002H4.12138l5.7935
@@ -150,8 +150,8 @@
               </icon-base>
             </div>
             <div class="swiper-prev">
-              <icon-base :width="30"
-                         :height="20">
+              <icon-base :iconWidth="30"
+                         :iconHeight="20">
                 <path fill-rule="evenodd"
                       d="m21.4993 17.2079-1.4142-1.4142
                        5.7936-5.79388H.29283v-2H25.8786l-5.7935-5.7935L21.4993.7921l8.2077 8.2077-8.2077 8.2081Z"
@@ -788,7 +788,7 @@ export default {
         right: 0;
 
         img {
-          height: em(416);
+          height: em(430);
         }
       }
     }

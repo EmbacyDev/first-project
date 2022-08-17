@@ -37,6 +37,11 @@ module.exports = {
       singleline: 'beside',
       multiline: 'beside'
     }],
+    'vue/html-button-has-type': ['error', {
+      button: true,
+      submit: true,
+      reset: true
+    }],
     'vue/max-len': ['error', {
       code: 200,
       template: 500,

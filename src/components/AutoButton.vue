@@ -70,6 +70,8 @@ export default {
   cursor: pointer;
   border: 0;
   border-radius: em(4);
+  @include btn-m($size: em(16));
+  white-space: nowrap;
   .svg-logo-w {
     margin-right: em(15);
     width: em(24);

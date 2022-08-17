@@ -15,7 +15,7 @@ body {
   padding: 0 em($in-100) em($in-140) em($in-100);
   display: flex;
   flex-direction: column;
-  //max-width: 1440px;
+  max-width: em(1440);
   margin: auto;
 }
 
@@ -25,8 +25,8 @@ img {
   object-fit: contain;
 }
 
-svg {
-  display: inline-block
+svg, span {
+  display: inline-block;
 }
 
 .logo-w {
@@ -66,12 +66,11 @@ html ::-webkit-scrollbar-thumb {
 /* buttons */
 .google-btn{
   background: $auto-button;
-  span {
-    @include btn-m($color: $toolips-f, $size: em(16));
-  }
+  color: $toolips-f;
 }
 .facebook-btn{
   background: #1877F2;
+  color: $white-m;
   span {
     @include btn-m($color: $white-m, $size: em(16));
   }
@@ -80,7 +79,7 @@ html ::-webkit-scrollbar-thumb {
 .primary {
   background: $blue-p;
   span {
-    @include btn-m($white-m)
+    color: $white-m;
   }
   &:hover {
     background: $hover-btn;
@@ -98,20 +97,20 @@ html ::-webkit-scrollbar-thumb {
   color: $blue-p;
   border: 1px solid $blue-p;
   span {
-    @include btn-m($blue-p)
+    color: $blue-p;
   }
   &:hover {
     border: 1px solid $hover-btn;
     color: $hover-btn;
     span {
-      @include btn-m($hover-btn)
+      color: $hover-btn;
     }
   }
   &:active {
     border: 1px solid $active-btn;
     color: $active-btn;
     span {
-      @include btn-m($active-btn)
+      color: $active-btn;
     }
   }
 }
@@ -119,7 +118,7 @@ html ::-webkit-scrollbar-thumb {
 .yellow {
   background: $yellow-p;
   span {
-    @include btn-m($blue-p)
+    color: $blue-p;
   }
   &:hover {
     background: $yellow-s;
@@ -133,9 +132,6 @@ html ::-webkit-scrollbar-thumb {
 
 .white {
   background: $white-m;
-  span {
-    @include btn-m()
-  }
   &:hover {
     background: $hover-btn;
   }
