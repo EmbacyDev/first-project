@@ -4,7 +4,7 @@
        clip-path="url(#a)">
         <path stroke-linecap="square"
               d="M10 9.254v2.977m0 2.979h.008"/>
-        <path d="M19 18 10 2 1 18h18Z"/>
+        <path d="M19 18 10 2 1 18h18z"/>
     </g>
     <defs>
         <clipPath id="a">

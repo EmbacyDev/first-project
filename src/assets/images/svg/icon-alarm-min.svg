@@ -1,0 +1,10 @@
+<svg width="20" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M19 18 10 2 1 18h18z"
+          fill="#FFDE32"
+          stroke="#FFDE32"
+          stroke-width="1.5"/>
+    <path d="M10 9v2.978M10 14.956h.008"
+          stroke="#050A1B"
+          stroke-width="1.5"
+          stroke-linecap="square"/>
+</svg>
