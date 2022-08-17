@@ -25,6 +25,10 @@ img {
   object-fit: contain;
 }
 
+svg {
+  display: inline-block
+}
+
 .logo-w {
   width: em(76);
 
