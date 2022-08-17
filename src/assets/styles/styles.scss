@@ -77,6 +77,7 @@ html ::-webkit-scrollbar-thumb {
 }
 
 .primary {
+  border: 0;
   background: $blue-p;
   span {
     color: $white-m;
@@ -116,6 +117,7 @@ html ::-webkit-scrollbar-thumb {
 }
 
 .yellow {
+  border: 0;
   background: $yellow-p;
   span {
     color: $blue-p;
@@ -131,6 +133,7 @@ html ::-webkit-scrollbar-thumb {
 }
 
 .white {
+  border: 0;
   background: $white-m;
   &:hover {
     background: $hover-btn;
