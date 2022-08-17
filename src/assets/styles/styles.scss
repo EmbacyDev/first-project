@@ -1,9 +1,9 @@
 @function em($pixels, $context: $browser-context-em) {
-  @return #{$pixels/$context}em;
+  @return calc($pixels / $context) * 1em;
 }
 
 @function px($pixels, $context: $browser-context-px) {
-  @return #{$pixels*$context}px;
+  @return calc($pixels * $context) * 1px;
 }
 
 /*----------------------- styles ------------------------------ */

@@ -1,0 +1,12 @@
+<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M19 18L10 1.99997L1 18H19Z"
+          fill="#FFDE32" stroke="#FFDE32"
+          stroke-width="1.5"/>
+    <path d="M10 8.99997V11.9778"
+          stroke="#050A1B"
+          stroke-width="1.5"
+          stroke-linecap="square"/>
+    <path d="M10 14.9556H10.0083"
+          stroke="#050A1B" stroke-width="1.5"
+          stroke-linecap="square"/>
+</svg>

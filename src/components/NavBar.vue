@@ -22,6 +22,7 @@
       />
     </div>
     <button :class="{ active: isActive }"
+            type="button"
             class="burger"
             @click="openMenu">
       <span class="burger-lines_first"/>

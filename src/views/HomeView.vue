@@ -3,7 +3,7 @@
     <div class="container">
       <h1>Slash prices, save money, shop smart</h1>
       <div class="headingImg">
-        <lottie-animation ref="lottieContainer"
+        <lottie-animation ref="lottieHeader"
                           :animationData="headerLottie"
                           :autoPlay="false"
                           :loop="false"/>
@@ -245,9 +245,10 @@
         <div class="grid-one">
           <div id="item-0">
             <div class="grid-img-w">
-              <img class="jpg"
-                   alt="icon"
-                   src="../assets/images/jpg/grid-content-1.jpg">
+              <lottie-animation ref="twoLottie"
+                                :animationData="twoLottie"
+                                :autoPlay="true"
+                                :loop="true"/>
             </div>
           </div>
           <div id="item-1">
@@ -264,9 +265,10 @@
           </div>
           <div id="item-3">
             <div class="grid-img-w">
-              <img class="jpg"
-                   alt="icon"
-                   src="../assets/images/jpg/grid-content-2.jpg">
+              <lottie-animation ref="threeLottie"
+                                :animationData="threeLottie"
+                                :autoPlay="true"
+                                :loop="true"/>
             </div>
           </div>
           <div id="item-4">
@@ -277,9 +279,10 @@
           </div>
           <div id="item-5">
             <div class="grid-img-w">
-              <img class="jpg"
-                   alt="icon"
-                   src="../assets/images/jpg/grid-content-3.jpg">
+              <lottie-animation ref="threeLottie"
+                                :animationData="fourLottie"
+                                :autoPlay="true"
+                                :loop="true"/>
             </div>
           </div>
         </div>
@@ -358,9 +361,10 @@
     <div class="container">
       <div class="content-w-3">
         <div class="img-content-w-3">
-          <img class="jpg"
-               alt="icon"
-               src="../assets/images/png/Lottie-decorative.png">
+          <lottie-animation ref="threeLottie"
+                            :animationData="fiveLottie"
+                            :autoPlay="true"
+                            :loop="true"/>
         </div>
         <div class="text-content-w-3">
           <h2>Bring a friend</h2>
@@ -379,6 +383,10 @@
 <script>
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import headerLottie from '@/assets/lottie/heder-lottie.json';
+import twoLottie from '@/assets/lottie/2-lottie.json';
+import threeLottie from '@/assets/lottie/3-lottie.json';
+import fourLottie from '@/assets/lottie/4-lottie.json';
+import fiveLottie from '@/assets/lottie/5-lottie.json';
 
 export default {
   name: 'HomeView',
@@ -391,6 +399,10 @@ export default {
   data() {
     return {
       headerLottie,
+      twoLottie,
+      threeLottie,
+      fourLottie,
+      fiveLottie,
       NavigationOptions: {
         nextEl: '.swiper-next',
         prevEl: '.swiper-prev'
@@ -408,7 +420,7 @@ export default {
   },
   methods: {
     scrollHandle() {
-      this.$refs.lottieContainer.play();
+      this.$refs.lottieHeader.play();
       // console.log('scroll');
     }
   }

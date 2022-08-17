@@ -1,6 +1,6 @@
 <template>
-  <nav-bar />
-  <router-view />
+  <nav-bar/>
+  <router-view/>
   <main-footer/>
 </template>
 
