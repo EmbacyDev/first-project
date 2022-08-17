@@ -62,7 +62,8 @@
 
 export default {
   name: 'MainFooter',
-  components: {},
+  components: {
+  },
   props: {},
   data() {
     return {};
