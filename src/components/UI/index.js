@@ -5,6 +5,7 @@ import MainForm from '@/components/MainForm';
 import MainButton from '@/components/MainButton';
 import iconBase from '@/components/IconBase.vue';
 import MainFooter from '@/components/MainFooter';
+import AutoButton from '@/components/AutoButton';
 
 export default [
   NavBar,
@@ -14,5 +15,6 @@ export default [
   Swiper,
   SwiperSlide,
   Vue3Lottie,
-  MainFooter
+  MainFooter,
+  AutoButton
 ];

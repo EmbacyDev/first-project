@@ -59,7 +59,7 @@ export default {
   },
   computed: {
     viewBox() {
-      return `"0 0 ${this.width} ${this.height} "`;
+      return `0 0 ${this.width} ${this.height}`;
     }
   },
   watch: {},
