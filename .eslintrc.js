@@ -44,7 +44,7 @@ module.exports = {
     }],
     'vue/max-len': ['error', {
       code: 200,
-      template: 500,
+      template: 1500,
       tabWidth: 2,
       comments: 100,
       ignorePattern: '',
