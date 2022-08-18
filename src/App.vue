@@ -1,6 +1,6 @@
 <template>
-  <nav-bar />
-  <router-view />
+  <nav-bar/>
+  <router-view/>
   <NotificationEmail/>
   <component-footer/>
 </template>

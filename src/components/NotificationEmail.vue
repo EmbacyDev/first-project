@@ -7,7 +7,8 @@
       <input type='text'
              name='user_email'
              placeholder='Inputname@mail.com'>
-      <button class='subscribe'>
+      <button type="button"
+              class='subscribe'>
         Subscribe
       </button>
     </div>

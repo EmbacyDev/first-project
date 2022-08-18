@@ -1,5 +1,6 @@
 <template>
-  <button class="main-button"
+  <button type="button"
+          class="main-button"
           @click="click">
     <span>{{ title }}</span>
     <svg v-if="icons"

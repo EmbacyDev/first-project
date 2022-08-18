@@ -23,7 +23,8 @@
                    class="primary"
       />
     </div>
-    <button class="burger-btn"
+    <button type="button"
+            class="burger-btn"
             @click="openMenu">
       <!--      /* переключение классов active: isActive */-->
       <span class="first"/>

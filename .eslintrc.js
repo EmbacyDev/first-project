@@ -33,6 +33,35 @@ module.exports = {
         ignores: []
       }
     ],
+    'vue/first-attribute-linebreak': ['error', {
+      singleline: 'beside',
+      multiline: 'beside'
+    }],
+    'vue/html-button-has-type': ['error', {
+      button: true,
+      submit: true,
+      reset: true
+    }],
+    'vue/max-len': ['error', {
+      code: 200,
+      template: 5500,
+      tabWidth: 2,
+      comments: 100,
+      ignorePattern: '',
+      ignoreComments: false,
+      ignoreTrailingComments: false,
+      ignoreUrls: false,
+      ignoreStrings: false,
+      ignoreTemplateLiterals: false,
+      ignoreRegExpLiterals: false,
+      ignoreHTMLAttributeValues: false,
+      ignoreHTMLTextContents: false
+    }],
+    'vue/html-closing-bracket-spacing': ['error', {
+      startTag: 'never',
+      endTag: 'never',
+      selfClosingTag: 'never'
+    }],
     'vue/max-attributes-per-line': ['error', {
       singleline: {
         max: 1
@@ -125,6 +154,8 @@ module.exports = {
     ],
     'import/extensions': 'off',
     'import/prefer-default-export': 'off',
+    'import/no-unresolved': 'off',
+    'import/no-absolute-path': 'off',
     'no-unused-expressions': 'error',
     'no-param-reassign': 'off',
     'prefer-destructuring': ['error', {
@@ -136,7 +167,6 @@ module.exports = {
     ],
     'no-bitwise': ['error', { allow: ['~'] }],
     'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-    'max-len': ['error', { code: 120 }],
     'object-curly-newline': ['error', {
       ObjectExpression: { multiline: true, consistent: true },
       ObjectPattern: { multiline: true, consistent: true }
