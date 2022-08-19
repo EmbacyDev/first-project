@@ -15,7 +15,7 @@
         </g>
       </svg>
     </span>
-    <span class="inner-txt">{{ title }}</span>
+    <span>{{ title }}</span>
   </button>
 </template>
 
@@ -52,7 +52,7 @@ export default {
   cursor: pointer;
   border: 0;
   border-radius: em(4);
-  @include btn-m($size: em(16));
+  @include btn-m($size: em(16), $color: $white-m);
   background: $fb-btn;
   white-space: nowrap;
   .svg-logo-w {
@@ -61,8 +61,5 @@ export default {
     height: em(24);
   }
 }
-.inner-txt {
-  color: #FFFFFF;
-;
-}
+
 </style>
