@@ -8,7 +8,7 @@ export default {
     function handleIntersect(entries, observer) {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          setTimeout(loadImage, 2000);
+          setTimeout(loadImage, 3000);
           observer.unobserve(el);
         }
       });
@@ -17,7 +17,7 @@ export default {
     function createObserver() {
       const options = {
         root: null,
-        threshold: 1
+        threshold: 0
       };
       const observer = new IntersectionObserver(handleIntersect, options);
       observer.observe(el);

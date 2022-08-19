@@ -27,111 +27,132 @@
           <div class="line-logo-w">
             <img class="png"
                  alt="icon"
-                 src="../assets/images/png/AliEpress.png">
+                 v-lazyload
+                 :data-src="require('../assets/images/png/AliEpress.png')">
           </div>
           <div class="line-logo-w">
             <img class="png"
                  alt="icon"
-                 src="../assets/images/png/Converse.png">
+                 v-lazyload
+                 :data-src="require('../assets/images/png/Converse.png')">
           </div>
           <div class="line-logo-w">
             <img class="png"
                  alt="icon"
-                 src="../assets/images/png/Ebuyer.png">
+                 v-lazyload
+                 :data-src="require('../assets/images/png/Ebuyer.png')">
           </div>
           <div class="line-logo-w">
             <img class="png"
                  alt="icon"
-                 src="../assets/images/png/NewLook.png">
+                 v-lazyload
+                 :data-src="require('../assets/images/png/NewLook.png')">
           </div>
           <div class="line-logo-w">
             <img class="png"
                  alt="icon"
-                 src="../assets/images/png/Village.png">
+                 v-lazyload
+                 :data-src="require('../assets/images/png/Village.png')">
           </div>
           <div class="line-logo-w">
             <img class="png"
                  alt="icon"
-                 src="../assets/images/png/B&Q.png">
+                 v-lazyload
+                 :data-src="require('../assets/images/png/B&Q.png')">
           </div>
           <div class="line-logo-w">
             <img class="png"
                  alt="icon"
-                 src="../assets/images/png/ienles.png">
-          </div>
-        </div>
-        <div class="move-line">
-          <div class="line-logo-w">
-            <img class="png"
-                 alt="icon"
-                 src="../assets/images/png/AliEpress.png">
-          </div>
-          <div class="line-logo-w">
-            <img class="png"
-                 alt="icon"
-                 src="../assets/images/png/Converse.png">
-          </div>
-          <div class="line-logo-w">
-            <img class="png"
-                 alt="icon"
-                 src="../assets/images/png/Ebuyer.png">
-          </div>
-          <div class="line-logo-w">
-            <img class="png"
-                 alt="icon"
-                 src="../assets/images/png/NewLook.png">
-          </div>
-          <div class="line-logo-w">
-            <img class="png"
-                 alt="icon"
-                 src="../assets/images/png/Village.png">
-          </div>
-          <div class="line-logo-w">
-            <img class="png"
-                 alt="icon"
-                 src="../assets/images/png/B&Q.png">
-          </div>
-          <div class="line-logo-w">
-            <img class="png"
-                 alt="icon"
-                 src="../assets/images/png/ienles.png">
+                 v-lazyload
+                 :data-src="require('../assets/images/png/ienles.png')">
           </div>
         </div>
         <div class="move-line">
           <div class="line-logo-w">
             <img class="png"
                  alt="icon"
-                 src="../assets/images/png/AliEpress.png">
+                 v-lazyload
+                 :data-src="require('../assets/images/png/AliEpress.png')">
           </div>
           <div class="line-logo-w">
             <img class="png"
                  alt="icon"
-                 src="../assets/images/png/Converse.png">
+                 v-lazyload
+                 :data-src="require('../assets/images/png/Converse.png')">
           </div>
           <div class="line-logo-w">
             <img class="png"
                  alt="icon"
-                 src="../assets/images/png/Ebuyer.png">
+                 v-lazyload
+                 :data-src="require('../assets/images/png/Ebuyer.png')">
           </div>
           <div class="line-logo-w">
             <img class="png"
                  alt="icon"
-                 src="../assets/images/png/NewLook.png">
+                 v-lazyload
+                 :data-src="require('../assets/images/png/NewLook.png')">
           </div>
           <div class="line-logo-w">
             <img class="png"
                  alt="icon"
-                 src="../assets/images/png/Village.png">
+                 v-lazyload
+                 :data-src="require('../assets/images/png/Village.png')">
           </div>
           <div class="line-logo-w">
             <img class="png"
                  alt="icon"
-                 src="../assets/images/png/B&Q.png">
+                 v-lazyload
+                 :data-src="require('../assets/images/png/B&Q.png')">
           </div>
           <div class="line-logo-w">
             <img class="png"
                  alt="icon"
-                 src="../assets/images/png/ienles.png">
+                 v-lazyload
+                 :data-src="require('../assets/images/png/ienles.png')">
+          </div>
+        </div>
+        <div class="move-line">
+          <div class="line-logo-w">
+            <img class="png"
+                 alt="icon"
+                 v-lazyload
+                 :data-src="require('../assets/images/png/AliEpress.png')">
+          </div>
+          <div class="line-logo-w">
+            <img class="png"
+                 alt="icon"
+                 v-lazyload
+                 :data-src="require('../assets/images/png/Converse.png')">
+          </div>
+          <div class="line-logo-w">
+            <img class="png"
+                 alt="icon"
+                 v-lazyload
+                 :data-src="require('../assets/images/png/Ebuyer.png')">
+          </div>
+          <div class="line-logo-w">
+            <img class="png"
+                 alt="icon"
+                 v-lazyload
+                 :data-src="require('../assets/images/png/NewLook.png')">
+          </div>
+          <div class="line-logo-w">
+            <img class="png"
+                 alt="icon"
+                 v-lazyload
+                 :data-src="require('../assets/images/png/Village.png')">
+          </div>
+          <div class="line-logo-w">
+            <img class="png"
+                 alt="icon"
+                 v-lazyload
+                 :data-src="require('../assets/images/png/B&Q.png')">
+          </div>
+          <div class="line-logo-w">
+            <img class="png"
+                 alt="icon"
+                 v-lazyload
+                 :data-src="require('../assets/images/png/ienles.png')">
           </div>
         </div>
       </div>
@@ -359,7 +380,8 @@
         <div class="img-content-w-2">
           <img class="jpg"
                alt="icon"
-               src="../assets/images/png/Banner-decorative.png">
+               v-lazyload
+               :data-src="require('../assets/images/png/Banner-decorative.png')">
         </div>
       </div>
     </div>
