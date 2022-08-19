@@ -1,7 +1,9 @@
 <template>
   <section class="home">
     <div class="container">
-      <h1>Slash prices, save money, shop smart</h1>
+      <div class="h1-w">
+        <h1>Slash prices, save money, shop smart</h1>
+      </div>
       <div class="headingImg">
         <lottie-animation ref="lottieHeader"
                           :animationData="headerLottie"
@@ -298,21 +300,24 @@
             <div class="grid-img-w">
               <img class="jpg"
                    alt="icon"
-                   src="../assets/images/jpg/grid-2-content-1.jpg">
+                   v-lazyload
+                   :data-src="require('../assets/images/jpg/grid-2-content-1.jpg')">
             </div>
           </div>
           <div id="item-1-2">
             <div class="grid-img-w">
               <img class="jpg"
                    alt="icon"
-                   src="../assets/images/jpg/grid-2-content-2.jpg">
+                   v-lazyload
+                   :data-src="require('../assets/images/jpg/grid-2-content-2.jpg')">
             </div>
           </div>
           <div id="item-2-2">
             <div class="grid-img-w">
               <img class="jpg"
                    alt="icon"
-                   src="../assets/images/jpg/grid-2-content-3.jpg">
+                   v-lazyload
+                   :data-src="require('../assets/images/jpg/grid-2-content-3.jpg')">
             </div>
           </div>
           <div id="item-3-2">
@@ -391,7 +396,6 @@ import fiveLottie from '@/assets/lottie/5-lottie.json';
 export default {
   name: 'HomeView',
   components: {},
-
   props: {},
   setup() {
     return {};

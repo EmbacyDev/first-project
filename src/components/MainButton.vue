@@ -81,12 +81,8 @@ export default {
     justify-content: center;
     align-content: center;
     padding: em(14) em(28) em(14) em(28);
-
-    span {
-      @include btn-m();
-      white-space: nowrap;
-    }
-
+    @include btn-m($size: em(16));
+    white-space: nowrap;
     svg {
       margin-left: em(8);
     }
@@ -101,12 +97,8 @@ export default {
     justify-content: center;
     align-content: center;
     padding: px(14) px(28) px(14) px(28);
-
-    span {
-      @include btn-m();
-      white-space: nowrap;
-    }
-
+    @include btn-m($size: px(16));
+    white-space: nowrap;
     svg {
       margin-left: px(8);
     }
