@@ -551,6 +551,7 @@ export default {
               right: em(16);
               top: em(16);
               background: $white-m;
+              /* Сверху | Справа | Снизу | Слева */
               padding: em(12) em(18) em(12) em(18);
               z-index: 1;
 
