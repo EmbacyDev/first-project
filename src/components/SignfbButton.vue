@@ -15,7 +15,7 @@
         </g>
       </svg>
     </span>
-    <span>{{ title }}</span>
+    <span class="inner-txt">{{ title }}</span>
   </button>
 </template>
 
@@ -45,18 +45,24 @@ export default {
 <style scoped lang="scss">
 .signfb-button {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   align-content: center;
-  padding: e(12) e(120) e(12) e(120);
+  padding: em(12) em(120) em(12) em(120);
   cursor: pointer;
   border: 0;
   border-radius: em(4);
-  background: $hover-btn;
-  .svg-log-w {
+  @include btn-m($size: em(16));
+  background: $fb-btn;
+  white-space: nowrap;
+  .svg-logo-w {
     margin-right: em(15);
     width: em(24);
     height: em(24);
   }
+}
+.inner-txt {
+  color: #FFFFFF;
+;
 }
 </style>
