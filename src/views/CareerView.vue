@@ -1,6 +1,7 @@
 <template>
   <div class="career">
     <h1>This is an <strong>career</strong> page</h1>
+    <SignfbButton/>
   </div>
 </template>
 <script>
