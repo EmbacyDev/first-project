@@ -1,8 +1,12 @@
+<!-- eslint-disable vuejs-accessibility/anchor-has-content -->
+<!-- eslint-disable vue/max-len -->
 <template>
   <section class="footer">
     <div class="container-footer">
       <div class="made-by">
-        <p>Made by Embacy</p>
+        <a href="https://www.embacy.io/"
+           target="_blank"
+           rel="noopener">Made by Embacy</a>
       </div>
       <div class="logo-w">
         <router-link class="logo-w"
@@ -23,42 +27,111 @@
         <router-link to="/blog">EULA</router-link>
       </div>
       <div class="rating-block">
-        <p>Trustpilot</p>
-        <p>chrome</p>
+        <a href="https://www.trustpilot.com/review/slash.com"
+           target="_blank"
+           rel="noopener">
+          <img class="logo"
+               alt="icon"
+               src="../assets/images/png/Evaluation.png">
+        </a>
+        <a href="https://chrome.google.com/webstore/detail/slash-%E2%80%93-reduce-prices-sho/mllianhhiambfndgboiddpflhnmpephj"
+           target="_blank"
+           rel="noopener">
+          <img class="logo"
+               alt="icon"
+               src="../assets/images/png/Chrome.png">
+        </a>
       </div>
       <div class="secure-block">
-        <p>Secure</p>
+        <img class="logo"
+             alt="icon"
+             src="../assets/images/png/Mastercard.png">
       </div>
       <div class="feedback-block">
         <p>Your feedback</p>
-        <a>support@slash.com</a>
+        <a href="mailto:support@slash.com">support@slash.com</a>
       </div>
       <div class="social-block">
         <p>Follow us</p>
-        <div class="social-link-w">
-          <icon-base :iconWidth="24"
-                     :iconHeight="24">
-            <path d="M24 0H0v24h24V0Zm-3.732 7.005H18.35c-1.503 0-1.794.714-1.794 1.764v2.313h3.588l-.468 3.621h-3.12V24h-3.741v-9.294h-3.13v-3.624h3.13v-2.67c0-3.099 1.893-4.788 4.659-4.788 1.326 0 2.463.099 2.796.144v3.237h-.003"
-                  fill="#0432D3"/>
-          </icon-base>
-          <icon-base :iconWidth="24"
-                     :iconHeight="24">
-            <path d="M24 0H0v24h24V0ZM9.497 12a2.506 2.506 0 0 1 2.501-2.501A2.506 2.506 0 0 1 14.499 12a2.506 2.506 0 0 1-2.501 2.501A2.506 2.506 0 0 1 9.497 12Zm10.002-.379a478.046 478.046 0 0 0 0 .803c.002.892.003 1.78-.049 2.672-.058 1.2-.33 2.264-1.21 3.145-.878.878-1.944 1.151-3.144 1.21a48.3 48.3 0 0 1-2.717.049h-.757c-.906 0-1.809.002-2.718-.05-1.2-.058-2.265-.33-3.144-1.21-.879-.878-1.152-1.943-1.21-3.144a47.319 47.319 0 0 1-.05-2.718v-.756a47.355 47.355 0 0 1 .05-2.718c.058-1.2.33-2.264 1.21-3.144.878-.879 1.943-1.152 3.144-1.21a47.29 47.29 0 0 1 2.717-.05 341.282 341.282 0 0 0 .757 0 47.351 47.351 0 0 1 2.718.05c1.2.058 2.264.33 3.144 1.21.878.878 1.152 1.943 1.21 3.144.051.908.05 1.81.05 2.717ZM8.15 12a3.843 3.843 0 0 0 3.849 3.848A3.843 3.843 0 0 0 15.846 12a3.843 3.843 0 0 0-3.848-3.848A3.843 3.843 0 0 0 8.15 12Zm6.956-4.006a.898.898 0 1 0 1.797 0 .898.898 0 1 0-1.797 0Z"
-                  fill="#0432D3"/>
-          </icon-base>
-          <icon-base :iconWidth="24"
-                     :iconHeight="24">
-            <path fill="#0432D3"
-                  d="M24 0H0v24h24V0Zm-5.54 8.7v.42c0 4.4-3.35 9.48-9.48 9.48a9.45 9.45 0 0 1-5.11-1.5 6.68 6.68 0 0 0 4.94-1.38 3.33 3.33 0 0 1-3.12-2.3c.52.07.98.07 1.5-.06a3.33 3.33 0 0 1-2.66-3.27v-.05c.44.25.96.4 1.5.43A3.33 3.33 0 0 1 5 6a9.46 9.46 0 0 0 6.87 3.49 3.34 3.34 0 0 1 5.69-3.05 6.58 6.58 0 0 0 2.11-.8 3.32 3.32 0 0 1-1.46 1.83 6.59 6.59 0 0 0 1.92-.52 6.98 6.98 0 0 1-1.67 1.73Z"/>
-          </icon-base>
-          <icon-base :iconWidth="24"
-                     :iconHeight="24">
-            <path fill="#0432D3"
-                  fill-rule="evenodd"
-                  d="M0 2.005V0h24v24H0V2.005Zm9.5 7.146h3.25v1.632C13.218 9.844 14.417 9 16.221 9c3.457 0 4.276 1.869 4.276 5.297v6.352H17v-5.57c0-1.953-.47-3.055-1.66-3.055-1.653 0-2.34 1.188-2.34 3.055v5.57H9.5V9.15Zm-6 11.348H7V9H3.5v11.5Zm4-15.25a2.25 2.25 0 1 1-4.5.1 2.25 2.25 0 0 1 4.5-.1Z"
-                  clip-rule="evenodd"/>
-          </icon-base>
-        </div>
+        <a href="https://www.facebook.com/"
+           target="_blank"
+           rel="noopener">
+          <div class="social-link-w">
+            <icon-base :iconWidth="32"
+                       :iconHeight="32">
+              <g clip-path="url(#a)">
+                <path fill="#0432D3"
+                      d="M32 0H0v32h32V0zm-4.976 9.34h-2.556c-2.004 0-2.392.952-2.392 2.352v3.084h4.784l-.624 4.828h-4.16V32h-4.988V19.608h-4.172v-4.832h4.172v-3.56c0-4.132 2.524-6.384 6.212-6.384 1.768 0 3.284.132 3.728.192V9.34h-.004z"/>
+              </g>
+              <defs>
+                <clipPath id="a">
+                  <path fill="#fff"
+                        d="M0 0h32v32H0z"/>
+                </clipPath>
+              </defs>
+            </icon-base>
+          </div>
+        </a>
+        <a href="https://www.instagram.com/"
+           target="_blank"
+           rel="noopener">
+          <div class="social-link-w">
+            <icon-base :iconWidth="32"
+                       :iconHeight="32">
+              <path d="M32 0H0v32h32V0zM12.663 16a3.342 3.342 0 0 1 3.334-3.335c1.836 0 3.335 1.499 3.335 3.335s-1.499 3.335-3.335 3.335A3.342 3.342 0 0 1 12.663 16zm13.336-.505V16.565c.002 1.19.004 2.372-.065 3.563-.078 1.6-.44 3.02-1.614 4.193-1.17 1.17-2.591 1.536-4.193 1.613-1.21.068-2.412.067-3.622.066a424.832 424.832 0 0 0-1.01 0c-1.208.001-2.41.002-3.623-.066-1.601-.077-3.02-.44-4.193-1.613-1.17-1.171-1.536-2.592-1.613-4.193-.068-1.21-.067-2.415-.066-3.624A445.48 445.48 0 0 0 6 16a445.48 445.48 0 0 0 0-.504c-.001-1.209-.002-2.411.066-3.624.077-1.6.44-3.02 1.613-4.193 1.171-1.17 2.592-1.536 4.193-1.613 1.21-.068 2.413-.067 3.623-.066a447.073 447.073 0 0 0 1.009 0c1.208-.001 2.411-.002 3.623.066 1.602.077 3.02.44 4.193 1.613 1.171 1.171 1.536 2.592 1.614 4.193.068 1.21.067 2.413.065 3.623zM10.866 16a5.124 5.124 0 0 0 5.131 5.131c2.84 0 5.131-2.292 5.131-5.131a5.124 5.124 0 0 0-5.13-5.131A5.124 5.124 0 0 0 10.865 16zm9.274-5.341a1.197 1.197 0 0 0 2.046.848 1.197 1.197 0 0 0-.848-2.046c-.663 0-1.198.535-1.198 1.198z"
+                    fill="#0432D3"/>
+            </icon-base>
+          </div>
+        </a>
+        <a href="https://twitter.com/"
+           target="_blank"
+           rel="noopener">
+          <div class="social-link-w">
+            <icon-base :iconWidth="32"
+                       :iconHeight="32">
+              <path d="M32 0H0v32h32V0zm-7.388 11.588c.012.188.012.384.012.576 0 5.872-4.472 12.636-12.644 12.636a12.6 12.6 0 0 1-6.824-1.992c.36.04.704.056 1.072.056 2.08 0 3.992-.704 5.516-1.896a4.444 4.444 0 0 1-4.152-3.08c.684.1 1.3.1 2.004-.08a4.44 4.44 0 0 1-3.556-4.36v-.056c.588.332 1.28.536 2.004.564a4.445 4.445 0 0 1-1.98-3.696c0-.828.216-1.584.604-2.24a12.611 12.611 0 0 0 9.16 4.644C15.2 9.644 17.456 7.2 20.168 7.2c1.28 0 2.432.536 3.244 1.4a8.776 8.776 0 0 0 2.82-1.068 4.422 4.422 0 0 1-1.952 2.444 8.786 8.786 0 0 0 2.56-.692 9.31 9.31 0 0 1-2.228 2.304z"
+                    fill="#0432D3"/>
+            </icon-base>
+          </div>
+        </a>
+        <a href="https://www.whatsapp.com/?lang=ru"
+           target="_blank"
+           rel="noopener">
+          <div class="social-link-w">
+            <icon-base :iconWidth="32"
+                       :iconHeight="32">
+              <path fill="#0432D3"
+                    fill-rule="evenodd"
+                    d="M16.042 24.97h.004c5.018 0 9.102-4.065 9.104-9.061a8.985 8.985 0 0 0-2.664-6.41A9.064 9.064 0 0 0 16.05 6.84c-5.022 0-9.107 4.065-9.109 9.06 0 1.713.481 3.38 1.392 4.822l.217.343-.92 3.344 3.446-.9.332.197c1.398.825 3 1.262 4.634 1.263zm3.128-7.673c.25.091 1.596.75 1.87.887l.15.073c.19.091.32.153.374.245.069.113.069.659-.16 1.295-.227.636-1.32 1.217-1.847 1.295-.471.07-1.068.1-1.723-.108a15.797 15.797 0 0 1-1.56-.574c-2.566-1.102-4.3-3.577-4.628-4.045a3.066 3.066 0 0 0-.048-.067l-.003-.004c-.145-.192-1.115-1.48-1.115-2.814 0-1.255.62-1.913.904-2.215l.054-.058c.25-.273.547-.34.73-.34.182 0 .365.001.524.009h.062c.16 0 .358-.001.554.468.076.18.186.448.303.73.235.57.495 1.2.541 1.292.069.136.114.296.023.477a7.759 7.759 0 0 0-.039.078c-.068.14-.118.242-.235.377-.046.053-.093.11-.14.168-.095.114-.189.228-.27.309-.137.136-.28.283-.12.556.16.273.709 1.165 1.522 1.887.875.777 1.636 1.105 2.02 1.271a4 4 0 0 1 .181.081c.274.136.434.114.593-.068.16-.182.685-.795.867-1.068.182-.273.365-.227.616-.137z"
+                    clip-rule="evenodd"/>
+              <path fill="#0432D3"
+                    fill-rule="evenodd"
+                    d="M32 0H0v32h32V0zM16.046 5a10.91 10.91 0 0 1 7.748 3.197A10.81 10.81 0 0 1 27 15.91c-.003 6.011-4.917 10.902-10.954 10.902h-.004c-1.834 0-3.635-.459-5.235-1.327L5 27l1.554-5.649a10.843 10.843 0 0 1-1.462-5.45C5.094 9.89 10.008 5 16.046 5z"
+                    clip-rule="evenodd"/>
+            </icon-base>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/home?originalSubdomain=ru"
+           target="_blank"
+           rel="noopener">
+          <div class="social-link-w">
+            <icon-base :iconWidth="32"
+                       :iconHeight="32">
+              <g clip-path="url(#a)">
+                <path fill="#0432D3"
+                      fill-rule="evenodd"
+                      d="M0 2.674V0H32V32H0V2.674zM12.666 12.2H17v2.176c.626-1.25 2.226-2.377 4.63-2.377 4.61 0 5.702 2.492 5.702 7.064v8.468h-4.665v-7.427c0-2.604-.625-4.073-2.213-4.073-2.204 0-3.12 1.584-3.12 4.073v7.427h-4.667V12.2zm-8 15.132h4.666V12H4.666v15.333zM10 7a3 3 0 0 1-.855 2.164A3 3 0 0 1 7 10.066 3 3 0 0 1 4 7a3 3 0 0 1 3-2.935 3 3 0 0 1 2.098.856A3 3 0 0 1 10 7z"
+                      clip-rule="evenodd"/>
+              </g>
+              <defs>
+                <clipPath id="a">
+                  <path fill="#fff"
+                        d="M0 0h32v32H0z"/>
+                </clipPath>
+              </defs>
+            </icon-base>
+          </div>
+        </a>
       </div>
       <div class="copyright-block">
         <p>© 2022 Slash</p>
@@ -98,8 +171,9 @@ export default {
       grid-area: 2 / 2 / 3 / 4;
       grid-template-columns: 1fr;
 
-      p {
+      a {
         @include body-r($color: $gray-m, $size: em(16));
+        text-decoration: none;
       }
     }
 
@@ -136,10 +210,15 @@ export default {
     }
 
     .rating-block {
+      margin-left: em(216);
+      margin-right: em(85);
+      display: grid;
       grid-area: 1 / 4 / 2 / 5;
     }
 
     .secure-block {
+      margin-left: em(216);
+      margin-right: em(85);
       grid-area: 2 / 4 / 3 / 5;
     }
 
@@ -172,7 +251,7 @@ export default {
         display: grid;
         grid-template-columns: repeat(4, min-content);
         grid-template-rows: min-content;
-        gap: 0 em(16);
+        gap: 0;
       }
     }
 
