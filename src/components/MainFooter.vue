@@ -27,12 +27,20 @@
         <router-link to="/blog">EULA</router-link>
       </div>
       <div class="rating-block">
-        <img class="logo"
-             alt="icon"
-             src="../assets/images/png/Evaluation M.png">
-        <img class="logo"
-             alt="icon"
-             src="../assets/images/png/Chrome.png">
+        <a href="https://www.trustpilot.com/review/slash.com"
+           target="_blank"
+           rel="noopener">
+          <img class="logo"
+               alt="icon"
+               src="../assets/images/png/EvaluationM.png">
+        </a>
+        <a href="https://chrome.google.com/webstore/detail/slash-%E2%80%93-reduce-prices-sho/mllianhhiambfndgboiddpflhnmpephj"
+           target="_blank"
+           rel="noopener">
+          <img class="logo"
+               alt="icon"
+               src="../assets/images/png/Chrome.png">
+        </a>
       </div>
       <div class="secure-block">
         <img class="logo"
@@ -202,10 +210,15 @@ export default {
     }
 
     .rating-block {
+      margin-left: em(216);
+      margin-right: em(85);
+      display: grid;
       grid-area: 1 / 4 / 2 / 5;
     }
 
     .secure-block {
+      margin-left: em(216);
+      margin-right: em(85);
       grid-area: 2 / 4 / 3 / 5;
     }
 
