@@ -4,7 +4,9 @@
   <section class="footer">
     <div class="container-footer">
       <div class="made-by">
-        <p>Made by Embacy</p>
+        <a href="https://www.embacy.io/"
+           target="_blank"
+           rel="noopener">Made by Embacy</a>
       </div>
       <div class="logo-w">
         <router-link class="logo-w"
@@ -25,11 +27,17 @@
         <router-link to="/blog">EULA</router-link>
       </div>
       <div class="rating-block">
-        <p>Trustpilot</p>
-        <p>chrome</p>
+        <img class="logo"
+             alt="icon"
+             src="../assets/images/png/Evaluation M.png">
+        <img class="logo"
+             alt="icon"
+             src="../assets/images/png/Chrome.png">
       </div>
       <div class="secure-block">
-        <p>Secure</p>
+        <img class="logo"
+             alt="icon"
+             src="../assets/images/png/Mastercard.png">
       </div>
       <div class="feedback-block">
         <p>Your feedback</p>
@@ -155,8 +163,9 @@ export default {
       grid-area: 2 / 2 / 3 / 4;
       grid-template-columns: 1fr;
 
-      p {
+      a {
         @include body-r($color: $gray-m, $size: em(16));
+        text-decoration: none;
       }
     }
 
