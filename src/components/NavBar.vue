@@ -54,46 +54,47 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@include tablet-u {
-  .navBar {
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  padding: em(50) em($in-100) em(50) em($in-100);
+  background-color: $white-m;
+  //background-color: red;
+  .menu {
+    width: em(483);
     display: flex;
     justify-content: space-between;
-    padding: em(50) em($in-100) em(50) em($in-100);
-    background-color: $white-m;
-    .menu {
-      width: em(483);
+    align-items: center;
+    nav {
+      margin: 0 em($in-16) 0 em($in-16);
+      width: em(268);
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      nav {
-        margin: 0 em($in-16) 0 em($in-16);
-        width: em(268);
-        display: flex;
-        justify-content: space-between;
-        a {
-          @include linkHeader;
-          @include body-r($size: em(16))
-        }
+      a {
+        @include linkHeader;
+        @include body-r($size: em(16))
       }
-    }
-    .btn-w {
-      display: flex;
-      .solid {
-        margin-right: em($in-16);
-      }
-    }
-    .burger {
-      display: none;
     }
   }
+  .btn-w {
+    display: flex;
+    .solid {
+      margin-right: em($in-16);
+    }
+  }
+  .burger {
+    display: none;
+  }
 }
-@include tablet-d {
+
+@include tablet {
   .navBar {
     position: relative;
     display: flex;
     justify-content: space-between;
-    padding: px($in-20) px($in-24) px($in-20) px($in-24);
-    background-color: red;
+    padding: px($in-20) px($in-60) px($in-20) px($in-60);
+    //background-color: red;
+    align-items: center;
     .menu {
       display: flex;
       justify-content: space-between;
@@ -128,10 +129,11 @@ export default {
       }
     }
     .btn-w {
-      display: none;
-      flex-direction: column;
+      display: flex;
+      flex-direction: row;
     }
     .burger {
+      display: flex;
       width: px(20);
       height: px(20);
       position: relative;

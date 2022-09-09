@@ -48,8 +48,8 @@ a {
 /* scrollBar */
 ::-webkit-scrollbar,
 html ::-webkit-scrollbar {
-  height: 5px;
-  width: 5px;
+  height: em(5);
+  width: em(5);
 }
 
 ::-webkit-scrollbar-track,
@@ -60,7 +60,7 @@ html ::-webkit-scrollbar-track {
 ::-webkit-scrollbar-thumb,
 html ::-webkit-scrollbar-thumb {
   background-color: $blue-p;
-  border-radius: 1px;
+  border-radius: em(1);
 }
 
 /* buttons */
@@ -96,19 +96,19 @@ html ::-webkit-scrollbar-thumb {
 .solid {
   background: $white-m;
   color: $blue-p;
-  border: 1px solid $blue-p;
+  border: em(1) solid $blue-p;
   span {
     color: $blue-p;
   }
   &:hover {
-    border: 1px solid $hover-btn;
+    border: em(1) solid $hover-btn;
     color: $hover-btn;
     span {
       color: $hover-btn;
     }
   }
   &:active {
-    border: 1px solid $active-btn;
+    border: em(1) solid $active-btn;
     color: $active-btn;
     span {
       color: $active-btn;
@@ -141,6 +141,147 @@ html ::-webkit-scrollbar-thumb {
   &:active {
     span {
       opacity: 0.7;
+    }
+  }
+}
+
+@include tablet {
+  /*----------------------- styles px ------------------------------ */
+  body {
+    font-size: 1.1111111111111112vw;
+  }
+
+  .container {
+    padding: 0 px($in-60) px($in-140) px($in-60);
+    display: flex;
+    flex-direction: column;
+    max-width: px(768);
+    margin: auto;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  svg, span {
+    display: inline-block;
+  }
+
+  .logo-w {
+    width: px(76);
+
+    .logo {
+      max-width: px($in-76);
+    }
+  }
+
+  a {
+    white-space: nowrap
+  }
+
+  .h-container-w {
+    width: 100%;
+  }
+
+  /* scrollBar */
+  ::-webkit-scrollbar,
+  html ::-webkit-scrollbar {
+    height: px(5);
+    width: px(5);
+  }
+
+  ::-webkit-scrollbar-track,
+  html ::-webkit-scrollbar-track {
+    background: $white-m;
+  }
+
+  ::-webkit-scrollbar-thumb,
+  html ::-webkit-scrollbar-thumb {
+    background-color: $blue-p;
+    border-radius: px(1);
+  }
+
+  /* buttons */
+  .google-btn{
+    background: $auto-button;
+    color: $toolips-f;
+  }
+  .facebook-btn{
+    background: #1877F2;
+    color: $white-m;
+    span {
+      @include btn-m($color: $white-m, $size: px(16));
+    }
+  }
+
+  .primary {
+    border: 0;
+    background: $blue-p;
+    span {
+      color: $white-m;
+    }
+    &:hover {
+      background: $hover-btn;
+    }
+    &:active {
+      background: $active-btn;
+      span {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .solid {
+    background: $white-m;
+    color: $blue-p;
+    border: px(1) solid $blue-p;
+    span {
+      color: $blue-p;
+    }
+    &:hover {
+      border: px(1) solid $hover-btn;
+      color: $hover-btn;
+      span {
+        color: $hover-btn;
+      }
+    }
+    &:active {
+      border: px(1) solid $active-btn;
+      color: $active-btn;
+      span {
+        color: $active-btn;
+      }
+    }
+  }
+
+  .yellow {
+    border: 0;
+    background: $yellow-p;
+    span {
+      color: $blue-p;
+    }
+    &:hover {
+      background: $yellow-s;
+    }
+    &:active {
+      span {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .white {
+    border: 0;
+    background: $white-m;
+    &:hover {
+      background: $hover-btn;
+    }
+    &:active {
+      span {
+        opacity: 0.7;
+      }
     }
   }
 }

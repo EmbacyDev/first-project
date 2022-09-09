@@ -1,24 +1,50 @@
 <template>
   <section class="home">
     <div class="container">
-      <div class="h1-w">
-        <h1>Slash prices, save money, shop smart</h1>
+      <div class="wraper">
+        <div class="h1-w">
+          <h1>Slash prices, save money, shop smart</h1>
+        </div>
+        <div class="headingImg-main">
+          <lottie-animation ref="lottieHeader"
+                            :animationData="headerLottie"
+                            :autoPlay="false"
+                            :loop="false"/>
+        </div>
+        <div class="info-heading">
+          <div class="rating-block">
+            <a href="https://chrome.google.com/webstore/detail/slash-%E2%80%93-reduce-prices-sho/mllianhhiambfndgboiddpflhnmpephj"
+               target="_blank"
+               rel="noopener">
+              <img class="logo"
+                   alt="icon"
+                   src="../assets/images/png/Chrome.png">
+            </a>
+            <a href="https://www.trustpilot.com/review/slash.com"
+               target="_blank"
+               rel="noopener">
+              <img class="logo"
+                   alt="icon"
+                   src="../assets/images/png/Evaluation.png">
+            </a>
+          </div>
+          <main-button title="Add to Chrome"
+                       class="primary"
+          />
+          <div class="max-width-496">
+            <div class="text-w">
+              <p>Get instant guaranteed discounts at your favourite
+                shops with Slash – the first price reduction extension ever
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="headingImg">
+      <div class="headingImg-tablet">
         <lottie-animation ref="lottieHeader"
-                          :animationData="headerLottie"
+                          :animationData="headerLottieTablet"
                           :autoPlay="false"
                           :loop="false"/>
-      </div>
-      <div class="info-heading">
-        <main-button title="Add to Chrome"
-                     class="primary"
-        />
-        <div class="max-width-496">
-          <p>Get instant guaranteed discounts at your favourite
-            shops <br> with Slash – the first price reduction extension ever
-          </p>
-        </div>
       </div>
     </div>
     <div class="bg-move-line">
@@ -410,6 +436,7 @@
 <script>
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import headerLottie from '@/assets/lottie/heder-lottie.json';
+import headerLottieTablet from '@/assets/lottie/heder-lottie-tablet.json';
 import twoLottie from '@/assets/lottie/2-lottie.json';
 import threeLottie from '@/assets/lottie/3-lottie.json';
 import fourLottie from '@/assets/lottie/4-lottie.json';
@@ -425,6 +452,7 @@ export default {
   data() {
     return {
       headerLottie,
+      headerLottieTablet,
       twoLottie,
       threeLottie,
       fourLottie,
@@ -461,9 +489,12 @@ export default {
       align-self: flex-start;
     }
 
-    .headingImg {
+    .headingImg-main {
       width: 100%;
       margin-top: em(60);
+    }
+    .headingImg-tablet {
+      display: none;
     }
 
     .info-heading {
@@ -839,6 +870,433 @@ export default {
           margin-top: em($in-32);
           margin-bottom: em($in-64);
           @include body-l($size: em(18));
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .home {
+    .container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .wraper {
+        width: 100%;
+        h1 {
+          max-width: px(304);
+          @include h1($size: px(40));
+          align-self: flex-start;
+        }
+
+        .headingImg-main {
+          display: none;
+        }
+
+        .info-heading {
+          display: flex;
+          align-self: flex-start;
+          align-items: flex-start;
+          flex-direction: column-reverse;
+          margin-top: px($in-24);
+          .rating-block {
+            max-width: px(239);
+            margin-top: px(100);
+            a:last-child {
+              margin-top: px(32);
+            }
+          }
+
+          .max-width-496 {
+            display: flex;
+            text-align: left;
+            max-width: px(496);
+            margin-left: px(0);
+            margin-bottom: px(64);
+
+            .text-w {
+              max-width: px(242);
+
+              p {
+                @include body-l($size: px(16))
+              }
+            }
+          }
+        }
+      }
+      .headingImg-tablet {
+        width: 100%;
+        display: block;
+        .lottie-animation-container {
+          margin-right: px(-60);
+        }
+      }
+    }
+
+  .headingImg-tablet {
+    width: 100%;
+    display: block;
+    .lottie-animation-container {
+      margin-right: px(-60);
+    }
+  }
+
+    .bg-move-line {
+      position: relative;
+      padding-top: px($in-124);
+      padding-bottom: px($in-124);
+      background: $mint-s;
+      clip-path: polygon(0 0, 100% 15%, 100% 85%, 0% 100%);
+
+      .move-line-w {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+      }
+
+      .move-line {
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding-top: px($in-2);
+        padding-bottom: px($in-2);
+        -webkit-animation: marquee 10s linear infinite;
+        animation: marquee 10s linear infinite;
+
+        .line-logo-w {
+          .png {
+            padding-right: px(64);
+            width: px(153);
+            height: px(56);
+          }
+        }
+      }
+    }
+
+    .slider-w {
+      position: relative;
+      max-width: 100%;
+      height: auto;
+      overflow: hidden;
+      min-width: 0;
+      min-height: 0;
+
+      .h2-w {
+        display: flex;
+        justify-content: space-between;
+        padding: px($in-140) 0 px($in-68) 0;
+
+        h2 {
+          @include h2($size: px(40));
+          align-self: flex-start;
+        }
+
+        .btn-slider-w {
+          display: flex;
+
+          .swiper-prev, .swiper-next {
+            width: px(48);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            padding: px($in-16) px($in-10) px($in-16) px($in-10);
+            cursor: pointer;
+
+            &:hover {
+              color: $gray-m;
+            }
+          }
+        }
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+
+        .swiper-slide {
+          width: auto;
+
+          .cads {
+            cursor: pointer;
+
+            .img-slide-w {
+              position: relative;
+
+              .sale-title {
+                position: absolute;
+                right: px(16);
+                top: px(16);
+                background: $white-m;
+                /* Сверху | Справа | Снизу | Слева */
+                padding: px(12) px(18) px(12) px(18);
+                z-index: 1;
+
+                p {
+                  @include subtitle($size: px(20));
+                }
+              }
+
+              img {
+                transition: all 0.2s 0s ease;
+
+                &:hover {
+                  transform: scale(1.1);
+                }
+              }
+            }
+
+            .text-slide {
+              display: flex;
+              flex-direction: column;
+              align-items: self-start;
+              margin-top: px($in-32);
+
+              .first-text-slide {
+                @include subtitle($size: px(20));
+              }
+
+              .second-text-slide {
+                margin-top: px($in-8);
+                @include body-r($color: $gray-m, $size: px(16));
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .container {
+      h2 {
+        @include h1($size: px(68));
+        align-self: flex-start;
+      }
+
+      .content-w {
+        margin-top: px(65);
+
+        .grid-one {
+          display: grid;
+          grid-template-rows: 1fr 1fr 1fr;
+          grid-template-columns: 1fr 1fr 1fr;
+          /* гориз. отступ | вертик. отступ */
+          gap: px(56) px(32);
+          height: 100%;
+
+          #item-0 {
+            grid-row-start: 1;
+            grid-column-start: 1;
+            grid-row-end: 2;
+            grid-column-end: 3;
+          }
+
+          #item-1 {
+            grid-row-start: 1;
+            grid-column-start: 3;
+            grid-row-end: 2;
+            grid-column-end: 4;
+          }
+
+          #item-2 {
+            grid-row-start: 2;
+            grid-column-start: 1;
+            grid-row-end: 3;
+            grid-column-end: 2;
+          }
+
+          #item-3 {
+            grid-row-start: 2;
+            grid-column-start: 2;
+            grid-row-end: 3;
+            grid-column-end: 4;
+          }
+
+          #item-4 {
+            grid-row-start: 3;
+            grid-column-start: 3;
+            grid-row-end: 4;
+            grid-column-end: 4;
+
+          }
+
+          #item-5 {
+            grid-row-start: 3;
+            grid-column-start: 1;
+            grid-row-end: 4;
+            grid-column-end: 3;
+          }
+
+          .grid-img-w {
+            width: px(808);
+          }
+
+          .text-grid {
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            flex-wrap: nowrap;
+
+            h3 {
+              @include h3($size: px(28));
+            }
+
+            h4 {
+              @include h3($size: px(28));
+            }
+
+            p {
+              margin-top: px($in-24);
+              @include body-l($size: px(18));
+            }
+          }
+        }
+      }
+    }
+
+    .bg-container {
+      padding-top: px(140);
+      background: $mint-s;
+      clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 95%);
+      height: auto;
+
+      .container {
+        h2 {
+          @include h2($size: px(40));
+        }
+
+        .grid-two {
+          margin-top: px($in-68);
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: px(56) px(56);
+          height: 100%;
+
+          #item-0-2 {
+            grid-row-start: 1;
+            grid-column-start: 1;
+            grid-row-end: 2;
+            grid-column-end: 2;
+          }
+
+          #item-1-2 {
+            grid-row-start: 1;
+            grid-column-start: 2;
+            grid-row-end: 2;
+            grid-column-end: 3;
+          }
+
+          #item-2-2 {
+            grid-row-start: 1;
+            grid-column-start: 3;
+            grid-row-end: 2;
+            grid-column-end: 4;
+          }
+
+          #item-3-2 {
+            grid-row-start: 2;
+            grid-column-start: 1;
+            grid-row-end: 3;
+            grid-column-end: 2;
+          }
+
+          #item-4-2 {
+            grid-row-start: 2;
+            grid-column-start: 2;
+            grid-row-end: 3;
+            grid-column-end: 3;
+          }
+
+          #item-5-2 {
+            grid-row-start: 2;
+            grid-column-start: 3;
+            grid-row-end: 3;
+            grid-column-end: 4;
+          }
+
+          .text-grid {
+            .sub-title {
+              @include preheader($size: px(14))
+            }
+
+            h3 {
+              margin-top: px($in-32);
+              @include h3($size: px(28));
+            }
+
+            p {
+              margin-top: px($in-16);
+              @include body-l($size: px(18));
+            }
+          }
+        }
+      }
+    }
+
+    .container {
+      .content-w-2 {
+        margin-top: px($in-100);
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        width: 100%;
+        background-color: $blue-p;
+        overflow: hidden;
+
+        .text-content-w-2 {
+          max-width: px(467);
+          margin: px(80) 0 px(80) px(80);
+
+          h2 {
+            @include h2($color: $white-m, $size: px(40));
+          }
+
+          p {
+            margin-top: px($in-32);
+            margin-bottom: px($in-64);
+            @include body-l($color: $white-m, $size: px(18));
+          }
+        }
+
+        .img-content-w-2 {
+          position: absolute;
+          right: 0;
+
+          img {
+            height: px(430);
+          }
+        }
+      }
+    }
+
+    .container {
+      .content-w-3 {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        .img-content-w-3 {
+          width: px(483);
+          height: px(466);
+        }
+        .text-content-w-3 {
+          padding: px($in-100) px($in-100) px($in-100) px($in-100);
+          h2 {
+            @include h2($size: px(40));
+          }
+          p {
+            margin-top: px($in-32);
+            margin-bottom: px($in-64);
+            @include body-l($size: px(18));
+          }
         }
       }
     }

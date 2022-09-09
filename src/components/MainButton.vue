@@ -72,23 +72,22 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@include tablet-u {
-  button {
-    display: flex;
-    border: 0;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    padding: em(14) em(28) em(14) em(28);
-    @include btn-m($size: em(16));
-    white-space: nowrap;
-    svg {
-      margin-left: em(8);
-    }
+button {
+  display: flex;
+  border: 0;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  padding: em(14) em(28) em(14) em(28);
+  @include btn-m($size: em(16));
+  white-space: nowrap;
+
+  svg {
+    margin-left: em(8);
   }
 }
-@include tablet-d {
+@include tablet {
   button {
     display: flex;
     border: 0;
@@ -96,7 +95,7 @@ export default {
     align-items: center;
     justify-content: center;
     align-content: center;
-    padding: px(14) px(28) px(14) px(28);
+    padding: px(11) px(20) px(11) px(20);
     @include btn-m($size: px(16));
     white-space: nowrap;
     svg {
